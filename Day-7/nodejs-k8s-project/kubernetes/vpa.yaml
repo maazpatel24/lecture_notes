@@ -1,0 +1,11 @@
+apiVersion: autoscaling/v1
+kind: VerticalPodAutoscaler 
+metadata: 
+  name: nodejs-app-vpa 
+spec:
+  targetRef: 
+    apiVersion: apps/v1 
+    kind: Deployment 
+    name: nodejs-app-deployment 
+  updatePolicy: 
+    updateMode: "Off"
