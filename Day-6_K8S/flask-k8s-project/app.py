@@ -7,4 +7,10 @@ def hello_world():
     return 'Hello, Kubernetes!' 
  
 if __name__ == '__main__': 
-    app.run(host='0.0.0.0', port=5000) 
+    app.run(host='0.0.0.0', port=5000)
+ 
+@app.route('/newroute') 
+
+def new_route(): 
+
+    return 'This is a new route!' 
