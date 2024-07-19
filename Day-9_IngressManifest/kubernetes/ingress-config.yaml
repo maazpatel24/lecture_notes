@@ -1,0 +1,46 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+spec:
+  tls:
+    - secretName: myapp-local-tls-secret
+      hosts:
+        - myapp.local
+        - myapp.maaz
+  rules:
+  - host: myapp.local
+    http:
+      paths:
+      - path: /maazpatel
+        backend:
+          service:
+            name: nginx-webapp-service
+            port:
+              number: 80
+        pathType: Prefix
+  - host: myapp.maaz
+    http:
+      paths:
+      - path: /diffpath
+        backend:
+          service:
+            name: nginx-webapp-service
+            port:
+              number: 80
+        pathType: Prefix
+  - host: myapp.local
+    http:
+      paths:
+      - path: /maazpatel24
+        backend:
+          service:
+            name: nginx-webapp-service
+            port:
+              number: 80
+        pathType: Prefix

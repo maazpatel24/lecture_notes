@@ -1,0 +1,1 @@
+kubectlde delete -f kubernetes/
