@@ -1,0 +1,16 @@
+---
+- hosts: web
+  become: true
+  tasks: 
+  - name: Creating a file
+    file:
+      path: index.html
+      state: touch
+  - name: Modify file
+    lineinfile:
+      path: index.html
+      line: Nginx is running from {{ansible_host}} server
+  - name: Deleting a file
+    file:
+      path: index.html
+      state: absent
