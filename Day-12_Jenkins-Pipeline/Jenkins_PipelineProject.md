@@ -1,6 +1,6 @@
 # Create a Pipeline Project for Simple Java in Jenkins
 
-The freestyle build job is a highly flexible and easy-to-use option. You can use it for any type of project; it is easy to set up, and many of its options appear in other build jobs. Below is a step by step process to create job in Jenkin.
+Below is a step by step process to create Pipeline job in Jenkin.
 
 ### Step1: Write Jenkinsfile 
 
