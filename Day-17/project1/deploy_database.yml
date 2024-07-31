@@ -1,0 +1,99 @@
+- hosts: db
+  become: true
+
+  vars:
+    postgresql_version: 12
+    postgresql_user: postgres
+    postgresql_group: postgres
+    postgresql_packages:
+      - postgresql
+      - postgresql-contrib
+      - libpq-dev
+      - python3-pip
+    postgresql_python_library: python3-psycopg2
+    postgresql_hba_entries:
+      - {type: local, database: all, user: postgres, auth_method: peer}
+      - {type: local, database: all, user: all, auth_method: md5}
+      - {type: host, database: all, user: all, address: '127.0.0.1/32', auth_method: md5}
+      - {type: host, database: all, user: all, address: '::1/128', auth_method: md5}
+      - {type: local, database: replication, user: all, auth_method: peer}
+      - {type: host, database: replication, user: all, address: '127.0.0.1/32', auth_method: md5}
+      - {type: host, database: replication, user: all, address: '::1/128', auth_method: md5}
+    db_user: eic
+    db_password: eic
+    db_name: database1
+    postgres_password: password
+
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt: update_cache=yes
+
+    - name: Add the PostgreSQL APT key
+      ansible.builtin.apt_key:
+        url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+        state: present
+    
+    - name: Add the PostgreSQL APT repositories
+      ansible.builtin.apt_repository:
+        repo: deb http://apt.postgresql.org/pub/repos/apt/ {{ ansible_distribution_release }}-pgdg main
+        state: present
+
+    - name: Update apt cache
+      ansible.builtin.apt: update_cache=yes
+
+    - name: Install PostgreSQL
+      apt:
+        name: postgresql-{{ postgresql_version }}
+        state: present
+    
+    # - name: "Install packages"
+    #   ansible.builtin.apt: 
+    #     name: "{{ item }}"
+    #     update_cache: true
+    #     state: present
+    #   with_items: "{{ postgresql_packages }}"
+
+    # - name: "Install Python packages"
+    #   ansible.builtin.apt: 
+    #     name: "{{ postgresql_python_library }}"
+    #     state: present
+    #   environment: []
+
+    - name: "Start and enable services"
+      ansible.builtin.service:
+        name: postgresql
+        state: started
+        enabled: true
+      
+    - name: "Create app database"
+      community.postgresql.postgresql_db:
+        state: present
+        name: "{{ db_name }}"
+      become: yes
+      become_user: postgres
+
+    - name: "Create db user"
+      community.postgresql.postgresql_user:
+        state: present
+        name: "{{ db_user }}"
+        password: "{{ db_password }}"
+      become: yes
+      become_user: postgres
+
+    - name: "Grant db user access to app db"
+      community.postgresql.postgresql_privs:
+        type: database
+        database: "{{ db_name }}"
+        roles: "{{ db_user }}"
+        grant_option: no
+        privs: all
+      become: yes
+      become_user: postgres
+    
+    - name: PostgreSQL Client Authentication Configuration File
+      template:
+        src: "templates/pg_hba.conf.j2"
+        dest: "/usr/local/pgsql/data/pg_hba.conf"
+        owner: "{{ postgresql_user }}"
+        group: "{{ postgresql_user }}"
+        mode: 0600
