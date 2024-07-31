@@ -34,7 +34,6 @@ You are tasked with deploying Ansible in a multi-node environment consisting of 
     ![Alt text](img/image1.png)
 
 ---
----
 # Project 2: Ad-Hoc Ansible Commands
 
 ## Problem Statement: 
@@ -63,7 +62,6 @@ Your organization needs to perform frequent, one-off administrative tasks across
 2. Command Scripts:
     + Create a script or documentation for each task, detailing the ad-hoc command used and its output.
 
----
 ---
 
 # Project 3: Working with Ansible Inventories
@@ -157,7 +155,7 @@ You need to manage a dynamic and diverse set of servers, which requires an organ
     + Implement a dynamic inventory script or use a dynamic inventory plugin.
     + Configure the dynamic inventory to categorize servers automatically based on predefined criteria.
 
----
+
 ---
 # Project 4: Ansible Playbooks: The Basics
 
@@ -223,7 +221,7 @@ Your team needs to automate repetitive tasks such as installing packages, config
     ![Alt text](img/image-5.png)
 
 
----
+
 ---
 
 # Project 5: Ansible Playbooks - Error Handling
