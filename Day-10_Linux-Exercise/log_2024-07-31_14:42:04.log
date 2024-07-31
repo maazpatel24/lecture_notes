@@ -1,0 +1,820 @@
+Validation of Required Commands:
+Command 'top' is Ready!...
+Command 'mpstat' is Ready!...
+Command 'ping' is Ready!...
+Command 'df' is Ready!...
+Command 'free' is Ready!...
+Command 'netstat' is Ready!...
+Command 'grep' is Ready!...
+Command 'awk' is Ready!...
+Command 'mail' is Ready!...
+-------------------------------------------------------------------------------
+Collecting System Metrics:
+CPU Usage:
+Linux 5.15.0-113-generic (AHMLPT1108) 	07/31/2024 	_x86_64_	(8 CPU)
+
+02:42:06 PM  CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+02:42:07 PM  all    7.31    0.13    4.29    0.13    0.00    0.00    0.00    0.00    0.00   88.15
+Average:     all    7.31    0.13    4.29    0.13    0.00    0.00    0.00    0.00    0.00   88.15
+-------------------------------------
+Memory Utilization:
+              total        used        free      shared  buff/cache   available
+Mem:          15846       12064         300        1099        3482        2354
+Swap:         15257       11924        3333
+-------------------------------------
+Disk Space:
+Filesystem      Size  Used Avail Use% Mounted on
+udev            7.7G     0  7.7G   0% /dev
+tmpfs           1.6G  2.5M  1.6G   1% /run
+/dev/sda3        94G   55G   34G  63% /
+tmpfs           7.8G  400M  7.4G   6% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           7.8G     0  7.8G   0% /sys/fs/cgroup
+/dev/loop0      128K  128K     0 100% /snap/bare/5
+/dev/loop2       56M   56M     0 100% /snap/core18/2823
+/dev/loop3       64M   64M     0 100% /snap/core20/2318
+/dev/loop1      164M  164M     0 100% /snap/chromium/2890
+/dev/loop5       56M   56M     0 100% /snap/core18/2829
+/dev/loop4      105M  105M     0 100% /snap/core/17200
+/dev/loop6       64M   64M     0 100% /snap/core20/2264
+/dev/loop8      104M  104M     0 100% /snap/core/16928
+/dev/loop7      163M  163M     0 100% /snap/chromium/2866
+/dev/loop23      84M   84M     0 100% /snap/outlook-for-linux/18
+/dev/loop27      88M   88M     0 100% /snap/teams-for-linux/645
+/dev/loop17     350M  350M     0 100% /snap/gnome-3-38-2004/143
+/dev/loop21      66M   66M     0 100% /snap/gtk-common-themes/1519
+/dev/loop19      39M   39M     0 100% /snap/snapd/21465
+/dev/loop22      39M   39M     0 100% /snap/snapd/21759
+/dev/loop16     165M  165M     0 100% /snap/gnome-3-28-1804/198
+/dev/loop14     497M  497M     0 100% /snap/gnome-42-2204/141
+/dev/loop20      67M   67M     0 100% /snap/cups/1052
+/dev/loop12      13M   13M     0 100% /snap/snap-store/1113
+/dev/loop11      13M   13M     0 100% /snap/snap-store/959
+/dev/loop13      92M   92M     0 100% /snap/gtk-common-themes/1535
+/dev/loop26      68M   68M     0 100% /snap/cups/1058
+/dev/loop25      37M   37M     0 100% /snap/gh/502
+/dev/loop18      75M   75M     0 100% /snap/core22/1380
+/dev/loop15     249M  249M     0 100% /snap/gnome-3-38-2004/99
+/dev/loop9       75M   75M     0 100% /snap/core22/1122
+/dev/loop28     4.3M  4.3M     0 100% /snap/tree/18
+/dev/loop10      79M   79M     0 100% /snap/office365webdesktop/5
+/dev/loop24     506M  506M     0 100% /snap/gnome-42-2204/176
+/dev/loop29      88M   88M     0 100% /snap/teams-for-linux/649
+/dev/sda2       976M  6.1M  970M   1% /boot/efi
+/dev/sda4       359G  182G  160G  54% /home
+tmpfs           1.6G  424K  1.6G   1% /run/user/1000
+-------------------------------------
+Network Statistics:
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.1:33060         0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:17473         0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:34535         0.0.0.0:*               LISTEN      830374/Code --stand 
+tcp        0      0 172.25.0.141:17472      0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:36217         0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:4769          0.0.0.0:*               LISTEN      3744/PanGPA         
+tcp        0      0 127.0.0.1:4767          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:38409         0.0.0.0:*               LISTEN      960525/Code --stand 
+tcp6       0      0 :::2377                 :::*                    LISTEN      -                   
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+tcp6       0      0 :::7946                 :::*                    LISTEN      -                   
+tcp6       0      0 :::8080                 :::*                    LISTEN      -                   
+tcp6       0      0 ::1:25                  :::*                    LISTEN      -                   
+tcp6       0      0 ::1:631                 :::*                    LISTEN      -                   
+udp        0      0 0.0.0.0:4789            0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:46008           0.0.0.0:*                           -                   
+udp        0      0 224.0.0.251:5353        0.0.0.0:*                           5940/chrome --passw 
+udp        0      0 224.0.0.251:5353        0.0.0.0:*                           5940/chrome --passw 
+udp        0      0 224.0.0.251:5353        0.0.0.0:*                           6062/chrome --type= 
+udp        0      0 224.0.0.251:5353        0.0.0.0:*                           6062/chrome --type= 
+udp        0      0 224.0.0.251:5353        0.0.0.0:*                           8216/teams-for-linu 
+udp        0      0 224.0.0.251:5353        0.0.0.0:*                           8216/teams-for-linu 
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                           -                   
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:631             0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:50305           0.0.0.0:*                           -                   
+udp6       0      0 :::5353                 :::*                                -                   
+udp6       0      0 :::7946                 :::*                                -                   
+udp6       0      0 :::33492                :::*                                -                   
+-------------------------------------
+Top Processes by CPU and Memory Usage:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+einfoch+ 1306457  5.9  1.4 1190017796 232760 ?   Sl   13:47   3:18 /usr/share/code/code --type=renderer --crashpad-handler-pid=6208 --enable-crash-reporter=ffded407-ef81-4c6f-83ff-0bcc42f0fdad,no_channel --user-data-dir=/home/einfochips/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --app-path=/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --lang=en-GB --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=85 --time-ticks-at-unix-epoch=-1721817110925192 --launch-time-ticks=130829570461 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7287136319428728133,5754342968152415617,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --vscode-window-config=vscode:188f5ccc-d8bf-489e-8e3e-bcff2a78b459
+einfoch+ 1017049  5.6  0.1 133620 31508 pts/4    Sl+  Jul30  66:32 /usr/bin/python3 /usr/bin/ansible all -i inventory -m ping
+einfoch+  386312  5.3 11.5 4869984 1881460 ?     Sl   Jul29 159:07 /usr/lib/virtualbox/VirtualBoxVM --comment kube-worker-1 --startvm c4e1376d-9e91-4b8f-aed5-80f7f38e0b93 --no-startvm-errormsgbox
+einfoch+  188484  1.6  0.1 1185987724 32060 ?    Sl   Jul26 125:36 /snap/office365webdesktop/5/office365webdesktop --type=renderer --enable-crash-reporter=4054de24-82b3-4e8b-bf71-e9b16366e997,no_channel --user-data-dir=/home/einfochips/snap/office365webdesktop/5/.config/Office365WebDesktop --app-path=/snap/office365webdesktop/5/resources/app.asar --enable-sandbox --first-renderer-process --no-sandbox --lang=en-GB --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1721935369748892 --launch-time-ticks=36267684748 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,16798779811876390912,9277381992186398541,131072 --disable-features=SpareRendererForSitePerProcess
+einfoch+    3990  1.5  1.8 5213676 301916 ?      Ssl  Jul24 150:48 /usr/bin/gnome-shell
+einfoch+  821497  1.2  1.3 1191280344 221876 ?   Sl   Jul30  17:11 /snap/outlook-for-linux/18/outlook-for-linux --type=renderer --enable-crash-reporter=ec2df1f7-1a0e-4c2e-8caf-30ee15675277,no_channel --user-data-dir=/home/einfochips/snap/outlook-for-linux/18/.config/outlook-for-linux --app-path=/snap/outlook-for-linux/18/resources/app.asar --no-sandbox --no-zygote --no-sandbox --lang=en-GB --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=22 --time-ticks-at-unix-epoch=-1721880834814621 --launch-time-ticks=102766908774 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,4141225950016304046,15159282712226658997,262144 --disable-features=HardwareMediaKeyHandling,SpareRendererForSitePerProcess
+einfoch+    6529  1.2  1.5 4472880 250128 ?      Sl   Jul24 121:13 /usr/lib/firefox/firefox -new-window
+einfoch+  830354  1.0  1.0 1187923528 176624 ?   Sl   Jul30  15:04 /usr/share/code/code --type=renderer --crashpad-handler-pid=6208 --enable-crash-reporter=ffded407-ef81-4c6f-83ff-0bcc42f0fdad,no_channel --user-data-dir=/home/einfochips/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --app-path=/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --lang=en-GB --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=73 --time-ticks-at-unix-epoch=-1721817110925192 --launch-time-ticks=103131020144 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,7287136319428728133,5754342968152415617,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --vscode-window-config=vscode:cfe67ed7-9ac8-4407-9a4d-a54d8f6fc63b
+einfoch+  724686  0.9  0.5 34645724 89616 ?      Sl   Jul30  14:02 /snap/chromium/2890/usr/lib/chromium-browser/chrome --type=gpu-process --crashpad-handler-pid=6015 --enable-crash-reporter=,snap --change-stack-guard-on-fork=enable --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --shared-files --field-trial-handle=3,i,13073045450563880538,16584506122649474850,262144 --disable-features=TFLiteLanguageDetectionEnabled --variations-seed-version
+einfoch+  473305  0.7  2.3 1191488500 386096 ?   Sl   Jul30  15:47 /snap/teams-for-linux/649/teams-for-linux --type=renderer --enable-crash-reporter=d7ba3629-1476-4509-82c7-9443e596f983,no_channel --user-data-dir=/home/einfochips/snap/teams-for-linux/649/.config/teams-for-linux --app-path=/snap/teams-for-linux/649/resources/app.asar --no-sandbox --no-zygote --no-sandbox --lang=en-GB --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=62 --time-ticks-at-unix-epoch=-1721817110925192 --launch-time-ticks=80613099696 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,15999231167790310620,11079197989470911098,262144 --enable-features=kWebSQLAccess --disable-features=HardwareMediaKeyHandling,SpareRendererForSitePerProcess --variations-seed-version
+-------------------------------------------------------------------------------
+Log Analysis
+ERROR:
+Jul 24 00:14:44 AHMLPT1108 gnome-shell[7434]: [7434:7699:0724/001444.868205:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for alive.github.com failed:
+Jul 24 00:14:44 AHMLPT1108 gnome-shell[7434]: ERROR: No matching issuer found
+Jul 24 00:14:44 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/001444.876491:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:45 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: [9893:0724/001445.034726:ERROR:cert_verify_proc_builtin.cc(677)] CertVerifyProcBuiltin for browser.events.data.microsoft.com failed:
+Jul 24 00:14:45 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: ERROR: No matching issuer found
+Jul 24 00:14:45 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001445.064155:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:45 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001445.104320:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:45 AHMLPT1108 gnome-shell[7434]: [7434:7699:0724/001445.193801:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for login.microsoftonline.com failed:
+Jul 24 00:14:45 AHMLPT1108 gnome-shell[7434]: ERROR: No matching issuer found
+Jul 24 00:14:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/001445.194113:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:45 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001445.247534:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:45 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: [9893:0724/001445.360484:ERROR:cert_verify_proc_builtin.cc(677)] CertVerifyProcBuiltin for common.online.office.com failed:
+Jul 24 00:14:45 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: ERROR: No matching issuer found
+Jul 24 00:14:45 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001445.360746:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/001445.529443:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:45 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001445.998824:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001446.106114:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001446.131283:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001446.145374:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001446.163846:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/001446.251378:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 gnome-shell[7434]: [7434:7699:0724/001446.413137:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for chat.google.com failed:
+Jul 24 00:14:46 AHMLPT1108 gnome-shell[7434]: ERROR: No matching issuer found
+Jul 24 00:14:46 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/001446.413719:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 gnome-shell[7434]: [7434:7699:0724/001446.429480:ERROR:cert_verify_proc_builtin.cc(1051)] CertVerifyProcBuiltin for signaler-pa.clients6.google.com failed:
+Jul 24 00:14:46 AHMLPT1108 gnome-shell[7434]: ERROR: No matching issuer found
+Jul 24 00:14:46 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/001446.429791:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: [9893:0724/001446.448445:ERROR:cert_verify_proc_builtin.cc(677)] CertVerifyProcBuiltin for word-telemetry.officeapps.live.com failed:
+Jul 24 00:14:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: ERROR: No matching issuer found
+Jul 24 00:14:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001446.448721:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001446.462770:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/001446.477987:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/001446.560978:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:14:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/001446.721210:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -202
+Jul 24 00:15:13 AHMLPT1108 dockerd[3144]: time="2024-07-24T00:15:13.941849180+05:30" level=error msg="[resolver] failed to query external DNS server" client-addr="udp:127.0.0.1:52664" dns-server="udp:127.0.0.53:53" error="read udp 127.0.0.1:52664->127.0.0.53:53: i/o timeout" question=";registry-1.docker.io.\tIN\t A" spanID=ec487fa3d1159366 traceID=4c27f5436cb9a5734c6da12b5dca4fae
+Jul 24 00:15:13 AHMLPT1108 dockerd[3144]: time="2024-07-24T00:15:13.941855526+05:30" level=error msg="[resolver] failed to query external DNS server" client-addr="udp:127.0.0.1:51902" dns-server="udp:127.0.0.53:53" error="read udp 127.0.0.1:51902->127.0.0.53:53: i/o timeout" question=";registry-1.docker.io.\tIN\t AAAA" spanID=115b19c1f5ad7fed traceID=276de91b138ab313bb589f083670c152
+Jul 24 00:15:28 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 00:15:28 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 00:17:36 AHMLPT1108 kernel: [212749.816581] shotwell[2396183]: segfault at 0 ip 00007f1568c3a72b sp 00007ffc6e67fce0 error 4 in libgexiv2.so.2.0.0[7f1568c36000+15000]
+Jul 24 00:19:07 AHMLPT1108 kernel: [212840.383167] shotwell[2685125]: segfault at 0 ip 00007f8c0d170974 sp 00007ffe56c05988 error 4 in libgio-2.0.so.0.6400.6[7f8c0d0bc000+114000]
+Jul 24 00:21:16 AHMLPT1108 kernel: [212968.990329] shotwell[2690382]: segfault at 0 ip 00007fd55b396974 sp 00007ffc4dcc8b78 error 4 in libgio-2.0.so.0.6400.6[7fd55b2e2000+114000]
+Jul 24 10:06:56 AHMLPT1108 kernel: [214074.427673] xhci_hcd 0000:00:14.0: xHC error in resume, USBSTS 0x411, Reinit
+Jul 24 10:07:01 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: (node:9893) electron: Failed to load URL: https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=243c63a3-247d-41c5-9d83-7788c43f1c43&scope=e03a13ee-9730-4cae-8525-47559c8cf18a%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Fowl.officeapps.live.com%2Foa%2FOAuth.html&client-request-id=0190e307-3fa8-73ea-8564-f744e6c10a28&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=3.10.0&x-app-name=OfficeOnline&x-app-ver=PRODUCTION.100:%2020240716.3%20V3&client_info=1&code_challenge=KQzjxfgRmWj-JhgDINbyUC-dbz5f4W-rpASIM5nxBKM&code_challenge_method=S256&prompt=none&login_hint=MaazSajid.Patel%40einfochips.com&X-AnchorMailbox=Oid%3Aee99257a-5a2f-4cde-9269-c9d09f48f980%400beb0c35-9cbb-4feb-99e5-589e415c7944&nonce=0190e307-3fac-7351-bd7b-385dfd416de8&state=eyJpZCI6IjAxOTBlMzA3LTNmYWItN2IzYy04ZjdmLWI0ZjU4ZDk0Y2MxNyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoic2lsZW50In19&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D with error: ERR_NAME_NOT_RESOLVED
+Jul 24 10:07:01 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100701.901874:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100702.204739:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100702.364896:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100702.386740:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100702.493058:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100702.509139:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100702.509998:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100702.570687:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100702.576414:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: (node:9893) electron: Failed to load URL: https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=243c63a3-247d-41c5-9d83-7788c43f1c43&scope=e03a13ee-9730-4cae-8525-47559c8cf18a%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Fowl.officeapps.live.com%2Foa%2FOAuth.html&client-request-id=0190e307-4391-7f04-ad0a-7a7f4cfbb544&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=3.10.0&x-app-name=OfficeOnline&x-app-ver=PRODUCTION.10:%2020240709.9%20V3&client_info=1&code_challenge=pVDmjLyz7aNiU56x8wKZzkHqKktlOElC6FK68LfhDiE&code_challenge_method=S256&prompt=none&login_hint=MaazSajid.Patel%40einfochips.com&X-AnchorMailbox=Oid%3Aee99257a-5a2f-4cde-9269-c9d09f48f980%400beb0c35-9cbb-4feb-99e5-589e415c7944&nonce=0190e307-439a-74e6-9a42-9772e673d9c8&state=eyJpZCI6IjAxOTBlMzA3LTQzOWEtN2I5My04M2UwLWM5YjI5MjViM2M4YyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoic2lsZW50In19&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D with error: ERR_CERT_COMMON_NAME_INVALID
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100702.601402:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100702.607955:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100702.740444:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:02 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100702.806403:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:03 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100703.027984:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:03 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100703.275705:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:03 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100703.518080:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:03 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: (node:9893) electron: Failed to load URL: https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=243c63a3-247d-41c5-9d83-7788c43f1c43&scope=e03a13ee-9730-4cae-8525-47559c8cf18a%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Fowl.officeapps.live.com%2Foa%2FOAuth.html&client-request-id=0190e307-4779-79cf-a72a-582676dc31f9&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=3.10.0&x-app-name=OfficeOnline&x-app-ver=PRODUCTION.100:%2020240716.3%20V3&client_info=1&code_challenge=wsVpEJEnzdRLoJxfQA31IrDHWy0cBSH7f8j-JXaT6oc&code_challenge_method=S256&prompt=none&login_hint=MaazSajid.Patel%40einfochips.com&X-AnchorMailbox=Oid%3Aee99257a-5a2f-4cde-9269-c9d09f48f980%400beb0c35-9cbb-4feb-99e5-589e415c7944&nonce=0190e307-4782-7bb7-a81e-8628ed9dc125&state=eyJpZCI6IjAxOTBlMzA3LTQ3ODItNzI2Ny05YjdkLWQxMjFlZjVmYzVmZCIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoic2lsZW50In19&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D with error: ERR_CERT_COMMON_NAME_INVALID
+Jul 24 10:07:04 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100704.010782:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:04 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100704.490053:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:04 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100704.550952:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:05 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100705.176297:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:05 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100705.193418:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:05 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100705.779414:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:05 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100705.859526:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:06 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100706.005454:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:06 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100706.474239:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:06 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100706.480477:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:07 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100707.399328:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:07 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100707.481639:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:07 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100707.494327:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:07 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100707.881083:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:07 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100707.895745:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:08 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100708.474608:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:08 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100708.654476:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:09 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100709.478438:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:09 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100709.483785:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:09 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100709.673330:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:09 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100709.872899:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:10 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100710.387063:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:10 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100710.473154:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:10 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100710.499727:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:11 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100711.268946:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:12 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100712.325145:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:12 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100712.473245:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:13 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100713.488317:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:13 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100713.492223:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:13 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100713.528254:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:13 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100713.545001:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:14 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100714.251405:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:14 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100714.265237:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:14 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100714.476529:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:14 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100714.692123:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:15 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100715.470315:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:16 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100716.491778:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:17 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100717.826343:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:17 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100717.829981:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:17 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100717.994019:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:18 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100718.474618:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:18 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100718.480825:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:18 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100718.488254:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:18 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100718.505396:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:18 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100718.513802:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:18 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100718.521224:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:18 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100718.528983:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.507582:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.515717:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.535941:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.617422:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.625768:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.629022:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.634908:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.639051:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.649776:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.652209:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.653703:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.665734:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.669553:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.674028:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.680965:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.684043:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.686943:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.691041:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.694794:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.698818:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.707231:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.712943:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.718046:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.724145:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.727957:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.731946:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.734281:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.739662:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.741911:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.747595:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.749094:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.755336:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.757972:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.763468:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.765254:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.779483:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.783085:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.790283:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.794974:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.797437:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.802453:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.807995:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.813901:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100719.829609:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.872546:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:19 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100719.888700:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:20 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100720.057077:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:20 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100720.064008:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:20 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100720.084216:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:20 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100720.475898:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:20 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100720.482157:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:20 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100720.525369:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:21 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100721.494145:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:21 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100721.511844:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:21 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100721.512313:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:21 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100721.519497:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:21 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100721.523170:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:21 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100721.556369:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:21 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100721.572190:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:22 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100722.474711:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:22 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100722.478351:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:22 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100722.539002:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:22 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100722.644098:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:22 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100722.667900:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:22 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100722.714993:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:22 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100722.720298:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:22 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100722.972547:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:23 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100723.206816:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:23 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100723.470141:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:23 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100723.474497:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:23 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100723.481868:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:23 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100723.511768:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:23 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: (node:9893) electron: Failed to load URL: https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=243c63a3-247d-41c5-9d83-7788c43f1c43&scope=e03a13ee-9730-4cae-8525-47559c8cf18a%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Fowl.officeapps.live.com%2Foa%2FOAuth.html&client-request-id=0190e307-959f-7e5f-9f8c-2c99a3c9e62a&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=3.10.0&x-app-name=OfficeOnline&x-app-ver=PRODUCTION.100:%2020240716.3%20V3&client_info=1&code_challenge=7vM43HZw5kfdm96xKRZGLRgbXvwL--ZAJgf0q3uBqQo&code_challenge_method=S256&prompt=none&login_hint=MaazSajid.Patel%40einfochips.com&X-AnchorMailbox=Oid%3Aee99257a-5a2f-4cde-9269-c9d09f48f980%400beb0c35-9cbb-4feb-99e5-589e415c7944&nonce=0190e307-95a2-776f-be5f-2cadb8a04931&state=eyJpZCI6IjAxOTBlMzA3LTk1YTItNzdkYi04MDI4LTdmMmVhY2QwNTBmZSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoic2lsZW50In19&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D with error: ERR_CERT_COMMON_NAME_INVALID
+Jul 24 10:07:23 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100723.671555:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:24 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100724.473397:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:24 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100724.532650:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:24 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100724.688888:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:24 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100724.733902:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:24 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100724.738659:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:24 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 10:07:24 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 10:07:25 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100724.999962:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:25 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100725.403951:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:25 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100725.409672:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:25 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100725.415431:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:25 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100725.421302:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:25 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100725.425700:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:25 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100725.433515:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100725.468272:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100725.472164:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100725.486467:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100725.491894:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:26 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100726.484006:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:26 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100726.495719:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:26 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100726.749944:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:26 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100726.915906:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:27 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100727.201072:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:27 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100727.421851:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:27 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100727.478519:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:27 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100727.484664:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:27 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100727.494027:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:28 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100728.474086:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:28 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100728.479378:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:28 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100728.489844:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:28 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100728.716629:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:29 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100729.474254:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:29 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100729.478101:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:29 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100729.519905:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:29 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100729.532647:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:29 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100729.538810:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:29 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100729.545440:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:29 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100729.557164:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:29 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100729.711194:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.265411:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.356603:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.363478:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.372541:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.378371:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100730.468757:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.486390:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: (node:9893) electron: Failed to load URL: https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=243c63a3-247d-41c5-9d83-7788c43f1c43&scope=e03a13ee-9730-4cae-8525-47559c8cf18a%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Fowl.officeapps.live.com%2Foa%2FOAuth.html&client-request-id=0190e307-b0d9-7731-9363-4e61e8406e0c&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=3.10.0&x-app-name=OfficeOnline&x-app-ver=PRODUCTION.100:%2020240709.9%20V3&client_info=1&code_challenge=XcRQK1KPFptTN7RyHfsjJwljOtvd4mRk2rXYEiy2HJo&code_challenge_method=S256&prompt=none&login_hint=MaazSajid.Patel%40einfochips.com&X-AnchorMailbox=Oid%3Aee99257a-5a2f-4cde-9269-c9d09f48f980%400beb0c35-9cbb-4feb-99e5-589e415c7944&nonce=0190e307-b0dd-7126-b94d-c87949d12fe2&state=eyJpZCI6IjAxOTBlMzA3LWIwZGQtN2Q0Ny1hYTdiLTUyMjhkZjNjOWRjZSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoic2lsZW50In19&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D with error: ERR_CERT_COMMON_NAME_INVALID
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.503424:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.514516:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.518981:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.524280:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.603098:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.608897:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.640085:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100730.722147:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100730.733956:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.805451:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100730.810006:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:31 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100731.263769:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:31 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100731.268529:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:31 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100731.472672:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:31 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100731.486189:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:32 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100732.474489:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:32 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100732.481191:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:32 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100732.489868:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:32 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100732.495809:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:32 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100732.500027:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:32 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100732.523131:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:32 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100732.771438:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:33 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100733.475775:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:33 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100733.483769:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:33 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100733.485443:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:33 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100733.974512:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:34 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100734.475115:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:34 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100734.480265:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:34 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100734.485256:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:34 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100734.505970:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:34 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: (node:9893) electron: Failed to load URL: https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=243c63a3-247d-41c5-9d83-7788c43f1c43&scope=e03a13ee-9730-4cae-8525-47559c8cf18a%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Fowl.officeapps.live.com%2Foa%2FOAuth.html&client-request-id=0190e307-c08c-7925-9b81-32233600e1c7&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=3.10.0&x-app-name=OfficeOnline&x-app-ver=PRODUCTION.100:%2020240716.3%20V3&client_info=1&code_challenge=xPQoIy9h1xU93PaD5-hWEW5SZO3VbjyrpcHHRW-BNY4&code_challenge_method=S256&prompt=none&login_hint=MaazSajid.Patel%40einfochips.com&X-AnchorMailbox=Oid%3Aee99257a-5a2f-4cde-9269-c9d09f48f980%400beb0c35-9cbb-4feb-99e5-589e415c7944&nonce=0190e307-c08f-7b3e-94bd-ab422b060c14&state=eyJpZCI6IjAxOTBlMzA3LWMwOGYtN2YyYS04OWRjLWVhZjZhYWE5YTk4MSIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoic2lsZW50In19&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D with error: ERR_CERT_COMMON_NAME_INVALID
+Jul 24 10:07:34 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100734.542349:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:35 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100735.288687:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:35 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100735.478232:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:35 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100735.483299:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:35 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100735.485406:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:35 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100735.492517:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100736.341236:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100736.469671:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100736.474979:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100736.481566:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100736.485732:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100736.497509:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100736.501557:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100736.507175:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100736.517646:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100736.640975:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100736.693016:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100736.739598:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100736.744471:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:36 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100736.750858:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:37 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100737.077562:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:37 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100737.282599:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:37 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100737.309926:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:37 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100737.473967:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:37 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100737.505251:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:38 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100738.138380:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:38 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100738.470335:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:38 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100738.476059:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:38 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/100738.489578:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:38 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100738.631076:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:38 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100738.687620:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:39 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100739.171373:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:07:39 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/100739.219727:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 10:19:44 AHMLPT1108 kernel: [214843.370940] shotwell[2761870]: segfault at 0 ip 00007efdcf1b9974 sp 00007fff24644148 error 4 in libgio-2.0.so.0.6400.6[7efdcf105000+114000]
+Jul 24 10:25:55 AHMLPT1108 kernel: [215214.393050] shotwell[2774287]: segfault at 0 ip 00007f0b92926974 sp 00007ffc42b39898 error 4 in libgio-2.0.so.0.6400.6[7f0b92872000+114000]
+Jul 24 10:26:36 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR]
+Jul 24 10:26:41 AHMLPT1108 teams-for-linux[2776200]: Theme parsing error: gtk.css:1422:23: 'font-feature-settings' is not a valid property name
+Jul 24 10:26:41 AHMLPT1108 teams-for-linux[2776200]: Theme parsing error: gtk.css:3308:25: 'font-feature-settings' is not a valid property name
+Jul 24 10:26:41 AHMLPT1108 teams-for-linux[2776200]: Theme parsing error: gtk.css:3770:23: 'font-feature-settings' is not a valid property name
+Jul 24 10:43:10 AHMLPT1108 kernel: [216249.232997] shotwell[2806684]: segfault at 0 ip 00007f7723ac6974 sp 00007ffca9d7a048 error 4 in libgio-2.0.so.0.6400.6[7f7723a12000+114000]
+Jul 24 10:51:36 AHMLPT1108 kernel: [216754.951356] shotwell[2822161]: segfault at 0 ip 00007f7b48731974 sp 00007ffe0afac438 error 4 in libgio-2.0.so.0.6400.6[7f7b4867d000+114000]
+Jul 24 10:57:57 AHMLPT1108 kernel: [217136.056861] shotwell[2834636]: segfault at 0 ip 00007f785aa4f974 sp 00007ffe98343988 error 4 in libgio-2.0.so.0.6400.6[7f785a99b000+114000]
+Jul 24 11:08:45 AHMLPT1108 kernel: [217784.805775] shotwell[2856486]: segfault at 0 ip 00007f8dedb6d974 sp 00007ffd60295668 error 4 in libgio-2.0.so.0.6400.6[7f8dedab9000+114000]
+Jul 24 11:14:15 AHMLPT1108 kernel: [218114.667622] shotwell[2867113]: segfault at 0 ip 00007f6a5cb68974 sp 00007ffefc6cc868 error 4 in libgio-2.0.so.0.6400.6[7f6a5cab4000+114000]
+Jul 24 11:32:04 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 11:32:04 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 11:46:31 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 11:46:31 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 11:52:28 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19776]: [19776:0724/115228.156538:ERROR:shared_image_manager.cc(220)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Jul 24 11:52:28 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19776]: [19776:0724/115228.157658:ERROR:shared_image_manager.cc(220)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Jul 24 11:52:28 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19776]: [19776:0724/115228.157928:ERROR:shared_image_manager.cc(220)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Jul 24 11:52:28 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19776]: [19776:0724/115228.158105:ERROR:shared_image_manager.cc(220)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Jul 24 11:52:28 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19776]: [19776:0724/115228.158268:ERROR:shared_image_manager.cc(220)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+Jul 24 11:52:39 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19826]: [19826:0724/115239.268986:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -101
+Jul 24 11:52:44 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19372]: [19372:0724/115244.265117:ERROR:object_proxy.cc(577)] Failed to call method: org.gnome.SessionManager.Inhibit: object_path= /org/gnome/SessionManager: org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.25107" (uid=1000 pid=19372 comm="/snap/outlook-for-linux/18/outlook-for-linux --no-" label="snap.outlook-for-linux.outlook-for-linux (enforce)") interface="org.gnome.SessionManager" member="Inhibit" error name="(unset)" requested_reply="0" destination="org.gnome.SessionManager" (uid=1000 pid=5748 comm="/usr/libexec/gnome-session-binary --systemd-servic" label="unconfined")
+Jul 24 11:52:44 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19372]: [19372:0724/115244.265143:ERROR:power_save_blocker_linux.cc(344)] No response to Inhibit() request!
+Jul 24 11:52:55 AHMLPT1108 gnome-shell[7434]: [7434:7434:0724/115255.735953:ERROR:interface_endpoint_client.cc(722)] Message 0 rejected by interface blink.mojom.WidgetHost
+Jul 24 11:53:00 AHMLPT1108 gnome-shell[7434]: [7434:7434:0724/115300.905447:ERROR:interface_endpoint_client.cc(722)] Message 0 rejected by interface blink.mojom.WidgetHost
+Jul 24 11:53:07 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/115307.862229:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -101
+Jul 24 12:09:44 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 12:09:44 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 12:14:34 AHMLPT1108 gnome-shell[5795]: Error getting desktop unix mode: Gio.IOErrorEnum: Error when getting information for file “/home/einfochips/Desktop/MaazPatel-icici-statement.pdf.crdownload”: No such file or directory
+Jul 24 12:14:34 AHMLPT1108 gnome-shell[5795]: Error getting desktop unix mode: Gio.IOErrorEnum: Error when getting information for file “/home/einfochips/Desktop/MaazPatel-icici-statement.pdf.crdownload”: No such file or directory
+Jul 24 12:14:42 AHMLPT1108 gnome-shell[7434]: [7434:7434:0724/121442.027259:ERROR:object_proxy.cc(576)] Failed to call method: org.freedesktop.FileManager1.ShowItems: object_path= /org/freedesktop/FileManager1: org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.2112" (uid=1000 pid=7434 comm="/snap/chromium/2890/usr/lib/chromium-browser/chrom" label="snap.chromium.chromium (enforce)") interface="org.freedesktop.FileManager1" member="ShowItems" error name="(unset)" requested_reply="0" destination="org.freedesktop.FileManager1" (uid=1000 pid=48575 comm="/usr/bin/nautilus --gapplication-service " label="unconfined")
+Jul 24 12:14:42 AHMLPT1108 gnome-shell[7434]: [7434:7434:0724/121442.028530:ERROR:platform_util_linux.cc(277)] Error calling ShowItems
+Jul 24 13:46:15 AHMLPT1108 kernel: [223535.107509] xhci_hcd 0000:00:14.0: xHC error in resume, USBSTS 0x411, Reinit
+Jul 24 13:46:21 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134621.839110:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:22 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19826]: [19826:0724/134622.483825:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:22 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19372]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:22 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134622.780479:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:22 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134622.804284:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:22 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134622.833809:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:22 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134622.833940:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:22 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134622.834028:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:22 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134622.845170:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:22 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134622.850998:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:22 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134622.856631:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:23 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134623.034672:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:23 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134623.081546:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:24 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134624.050413:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:24 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134624.056463:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:24 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134624.071740:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:24 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134624.305623:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:24 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134624.314901:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:24 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:24 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:24 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134624.449492:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:24 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:24 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134624.645895:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:24 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134624.911734:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:24 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134624.920910:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:24 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134624.930002:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:25 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134625.638365:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:25 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:25 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134625.660951:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:25 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:25 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134625.785011:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:25 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:26 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134626.113308:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:26 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134626.536585:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:26 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134626.850067:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:26 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134626.866075:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:26 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134626.868930:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:26 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134626.918474:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:26 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134626.923300:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:26 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134626.928062:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:26 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134626.935171:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:26 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134626.940162:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:26 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134626.996332:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:27 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134627.007450:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:27 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19826]: [19826:0724/134627.253941:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:27 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19372]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:27 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134627.779100:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:27 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134627.913775:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:27 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134627.937325:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:28 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134628.008903:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:28 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:28 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134628.015141:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:28 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:28 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134628.038844:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:28 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:28 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134628.255789:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:28 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134628.316893:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:28 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134628.912091:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:28 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134628.993760:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:30 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 13:46:30 AHMLPT1108 ubuntu-appindicators@ubuntu.com[5795]: Impossible to send about-to-show to menu: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: error occurred in AboutToShow
+Jul 24 13:46:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134630.554754:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134630.564428:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:30 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134630.569499:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:31 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134631.698659:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:31 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:31 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134631.703532:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:31 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:31 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134631.723520:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:31 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:32 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134632.305545:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:32 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134632.318412:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:32 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134632.325652:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:32 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134632.326182:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:32 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134632.330287:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:32 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134632.350014:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:32 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134632.354885:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:32 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134632.913594:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:33 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134633.235846:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:34 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134634.173329:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:34 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134634.960757:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:34 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:34 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134634.968107:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:34 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:34 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134634.978755:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:34 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134635.026796:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134635.030732:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134635.040402:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134635.093141:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134635.341306:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134635.358942:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:35 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134635.531203:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134635.909924:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134635.933068:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134635.982402:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134635.987293:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:35 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134636.003220:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:36 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134636.008138:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:36 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:36 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134636.060977:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:36 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134636.320135:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134636.919833:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134636.924475:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134636.942487:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:36 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134636.946581:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:37 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134637.004540:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:37 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134637.032792:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:37 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134637.120595:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:37 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134637.925709:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:37 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134637.930811:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:37 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134637.941886:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:37 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134637.947364:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:37 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134637.951785:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:38 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134638.015483:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:38 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:38 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134638.038695:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:38 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:38 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134638.062264:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:38 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:38 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134638.626616:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:38 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134638.911653:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:38 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134638.915791:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:38 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134638.923232:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:38 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134638.960699:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:38 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:39 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134639.035273:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:39 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:39 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134639.331997:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:39 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:39 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134639.449832:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:39 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:39 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134639.923101:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:39 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134639.973660:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:40 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134640.368672:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:40 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134640.683083:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:40 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134640.696581:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:40 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134640.700567:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:40 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134640.712326:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:40 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134640.916038:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:40 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134640.929649:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:41 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134641.476221:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:41 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134641.873267:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:41 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134641.878363:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:41 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134641.890452:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:41 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134641.895092:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:41 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134641.911445:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:42 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134642.111471:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:42 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:42 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19826]: [19826:0724/134642.249257:ERROR:ssl_client_socket_impl.cc(975)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:42 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19372]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:43 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134643.909861:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:43 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134643.915490:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:43 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134643.920125:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:43 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134643.925219:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:43 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134643.935245:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:43 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134643.941560:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:43 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134643.951269:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:44 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134644.882409:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:44 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134644.911657:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:44 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134644.918995:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:44 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:44 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134644.925333:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:44 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134644.929578:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134645.026838:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:45 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134645.035035:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134645.075945:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134645.090600:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134645.151758:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134645.167295:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134645.266837:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134645.507135:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134645.598274:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134645.618682:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134645.910382:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:45 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134645.914668:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134646.341263:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134646.724135:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134646.728173:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134646.923141:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134646.923403:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:46 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134646.923651:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:46 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134646.943247:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:46 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134646.945663:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:46 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:47 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134647.547345:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:47 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134647.561012:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:47 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134647.713997:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:47 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134647.718180:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:47 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134647.780825:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:47 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[10015]: [10015:0724/134647.789385:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:47 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134647.920481:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:48 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134648.925630:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:48 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134648.931858:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:48 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134648.939977:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:48 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134648.943872:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:48 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134648.959100:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:48 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134648.982048:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:49 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134649.268592:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:49 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134649.911777:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:49 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134649.916504:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:49 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/134649.925240:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:49 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134649.929097:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:49 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:49 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134649.944793:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 13:46:49 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19438]: [ERROR] An unexpected SSL error has occurred: net::ERR_CERT_COMMON_NAME_INVALID
+Jul 24 13:46:50 AHMLPT1108 teams-for-linux_teams-for-linux.desktop[19853]: [19853:0724/134650.036336:ERROR:ssl_client_socket_impl.cc(879)] handshake failed; returned -1, SSL error code 1, net_error -200
+Jul 24 14:13:05 AHMLPT1108 kernel: [225146.088564] shotwell[3087849]: segfault at 0 ip 00007f170b764974 sp 00007ffe095339b8 error 4 in libgio-2.0.so.0.6400.6[7f170b6b0000+114000]
+Jul 24 14:33:11 AHMLPT1108 gnome-shell[7434]: [7434:7434:0724/143311.885188:ERROR:interface_endpoint_client.cc(722)] Message 0 rejected by interface blink.mojom.WidgetHost
+Jul 24 15:03:10 AHMLPT1108 gnome-shell[7780]: [7780:7837:0724/150310.263590:ERROR:ssl_client_socket_impl.cc(878)] handshake failed; returned -1, SSL error code 1, net_error -100
+Jul 24 15:04:25 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19372]: [19372:0724/150425.663063:ERROR:object_proxy.cc(577)] Failed to call method: org.gnome.SessionManager.Inhibit: object_path= /org/gnome/SessionManager: org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.25273" (uid=1000 pid=19372 comm="/snap/outlook-for-linux/18/outlook-for-linux --no-" label="snap.outlook-for-linux.outlook-for-linux (enforce)") interface="org.gnome.SessionManager" member="Inhibit" error name="(unset)" requested_reply="0" destination="org.gnome.SessionManager" (uid=1000 pid=5748 comm="/usr/libexec/gnome-session-binary --systemd-servic" label="unconfined")
+Jul 24 15:04:25 AHMLPT1108 outlook-for-linux_outlook-for-linux.desktop[19372]: [19372:0724/150425.663111:ERROR:power_save_blocker_linux.cc(344)] No response to Inhibit() request!
+Jul 24 15:10:46 AHMLPT1108 office365webdesktop_office365webdesktop.desktop[9893]: [9893:0724/151046.709363:ERROR:gpu_process_host.cc(943)] GPU process exited unexpectedly: exit_code=512
+Jul 24 15:21:57 AHMLPT1108 kernel: [229278.596227] shotwell[3217140]: segfault at 0 ip 00007fdc8c091974 sp 00007ffe8b6ede38 error 4 in libgio-2.0.so.0.6400.6[7fdc8bfdd000+114000]
+Jul 24 15:26:29 AHMLPT1108 jenkins[1909335]: #011at jenkins.ErrorAttributeFilter.doFilter(ErrorAttributeFilter.java:29)
+Jul 24 15:26:30 AHMLPT1108 jenkins[1909335]: #011at jenkins.ErrorAttributeFilter.doFilter(ErrorAttributeFilter.java:29)
+Jul 24 15:26:38 AHMLPT1108 jenkins[1909335]: #011at jenkins.ErrorAttributeFilter.doFilter(ErrorAttributeFilter.java:29)
+Jul 24 15:26:38 AHMLPT1108 jenkins[1909335]: #011at jenkins.ErrorAttributeFilter.doFilter(ErrorAttributeFilter.java:29)
+Jul 24 15:28:15 AHMLPT1108 kernel: [229656.496874] shotwell[3228385]: segfault at 0 ip 00007faa4f8d3974 sp 00007fff5b863dc8 error 4 in libgio-2.0.so.0.6400.6[7faa4f81f000+114000]
+Jul 24 15:32:41 AHMLPT1108 kernel: [229921.843105] shotwell[3237035]: segfault at 0 ip 00007facc9c37974 sp 00007ffefcd9c7c8 error 4 in libgio-2.0.so.0.6400.6[7facc9b83000+114000]
+Jul 24 15:33:30 AHMLPT1108 kernel: [229971.391785] shotwell[3238988]: segfault at 0 ip 00007ff25d669974 sp 00007fffe2455b88 error 4 in libgio-2.0.so.0.6400.6[7ff25d5b5000+114000]
+Jul 24 15:36:29 AHMLPT1108 kernel: [230149.952749] shotwell[3244170]: segfault at 0 ip 00007f1bb8db4974 sp 00007fff0b55b808 error 4 in libgio-2.0.so.0.6400.6[7f1bb8d00000+114000]
+Jul 24 15:41:53 AHMLPT1108 Microsoft.VisualStudio.Code.Server: OtherProcessOnSameMachine proffered brokered service(s): Microsoft.VisualStudio.ErrorReportingService (0.1).
+Binary file /var/log/syslog matches
+WARNING:
+Jul 24 00:15:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 31 with keysym 31 (keycode a).
+Jul 24 00:15:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 32 with keysym 32 (keycode b).
+Jul 24 00:15:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 33 with keysym 33 (keycode c).
+Jul 24 00:15:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 38 with keysym 38 (keycode 11).
+Jul 24 00:15:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 39 with keysym 39 (keycode 12).
+Jul 24 00:15:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 34 with keysym 34 (keycode d).
+Jul 24 00:15:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 35 with keysym 35 (keycode e).
+Jul 24 00:15:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 36 with keysym 36 (keycode f).
+Jul 24 00:15:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 37 with keysym 37 (keycode 10).
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 31 with keysym 31 (keycode a).
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 32 with keysym 32 (keycode b).
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 33 with keysym 33 (keycode c).
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 34 with keysym 34 (keycode d).
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 38 with keysym 38 (keycode 11).
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 39 with keysym 39 (keycode 12).
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 35 with keysym 35 (keycode e).
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 36 with keysym 36 (keycode f).
+Jul 24 10:07:25 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 37 with keysym 37 (keycode 10).
+Jul 24 10:49:53 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:53.461+0000 [id=2017]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb fc21c5bce2e398f939ffe41f661c6f165ed094dceca7535cdbadb5766fe7119a. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+Jul 24 10:49:53 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:53.467+0000 [id=1396]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb fc21c5bce2e398f939ffe41f661c6f165ed094dceca7535cdbadb5766fe7119a. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+Jul 24 10:49:53 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:53.467+0000 [id=2018]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb fc21c5bce2e398f939ffe41f661c6f165ed094dceca7535cdbadb5766fe7119a. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+Jul 24 10:49:53 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:53.466+0000 [id=2019]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb fc21c5bce2e398f939ffe41f661c6f165ed094dceca7535cdbadb5766fe7119a. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+Jul 24 10:49:53 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:53.475+0000 [id=2018]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /job/Dev-Compile/descriptorByName/hudson.plugins.git.UserRemoteConfig/checkCredentialsId by eic. Returning 403.
+Jul 24 10:49:53 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:53.474+0000 [id=1396]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /job/Dev-Compile/descriptorByName/hudson.plugins.git.UserRemoteConfig/fillCredentialsIdItems by eic. Returning 403.
+Jul 24 10:49:53 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:53.474+0000 [id=2017]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /job/Dev-Compile/descriptorByName/hudson.plugins.git.UserRemoteConfig/fillCredentialsIdItems by eic. Returning 403.
+Jul 24 10:49:53 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:53.475+0000 [id=2019]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /job/Dev-Compile/descriptorByName/hudson.plugins.git.UserRemoteConfig/checkUrl by eic. Returning 403.
+Jul 24 10:49:55 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:55.075+0000 [id=1962]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb fc21c5bce2e398f939ffe41f661c6f165ed094dceca7535cdbadb5766fe7119a. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+Jul 24 10:49:55 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:55.076+0000 [id=1962]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /job/Dev-Compile/descriptorByName/hudson.plugins.git.UserRemoteConfig/fillCredentialsIdItems by eic. Returning 403.
+Jul 24 10:49:55 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:55.082+0000 [id=2019]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb fc21c5bce2e398f939ffe41f661c6f165ed094dceca7535cdbadb5766fe7119a. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+Jul 24 10:49:55 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:55.083+0000 [id=2019]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /job/Dev-Compile/descriptorByName/hudson.plugins.git.UserRemoteConfig/checkUrl by eic. Returning 403.
+Jul 24 10:49:55 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:55.090+0000 [id=1926]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb fc21c5bce2e398f939ffe41f661c6f165ed094dceca7535cdbadb5766fe7119a. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+Jul 24 10:49:55 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:55.092+0000 [id=1926]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /job/Dev-Compile/descriptorByName/hudson.plugins.git.UserRemoteConfig/checkCredentialsId by eic. Returning 403.
+Jul 24 10:49:55 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:55.098+0000 [id=1962]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb fc21c5bce2e398f939ffe41f661c6f165ed094dceca7535cdbadb5766fe7119a. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+Jul 24 10:49:55 AHMLPT1108 jenkins[1909335]: 2024-07-24 05:19:55.098+0000 [id=1962]#011WARNING#011hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /job/Dev-Compile/descriptorByName/hudson.plugins.git.UserRemoteConfig/fillCredentialsIdItems by eic. Returning 403.
+Jul 24 11:32:08 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 31 with keysym 31 (keycode a).
+Jul 24 11:32:08 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 32 with keysym 32 (keycode b).
+Jul 24 11:32:08 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 38 with keysym 38 (keycode 11).
+Jul 24 11:32:08 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 39 with keysym 39 (keycode 12).
+Jul 24 11:32:08 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 33 with keysym 33 (keycode c).
+Jul 24 11:32:08 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 34 with keysym 34 (keycode d).
+Jul 24 11:32:08 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 35 with keysym 35 (keycode e).
+Jul 24 11:32:08 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 36 with keysym 36 (keycode f).
+Jul 24 11:32:08 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 37 with keysym 37 (keycode 10).
+Jul 24 11:46:32 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 31 with keysym 31 (keycode a).
+Jul 24 11:46:32 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 32 with keysym 32 (keycode b).
+Jul 24 11:46:32 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 38 with keysym 38 (keycode 11).
+Jul 24 11:46:32 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 39 with keysym 39 (keycode 12).
+Jul 24 11:46:32 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 33 with keysym 33 (keycode c).
+Jul 24 11:46:32 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 34 with keysym 34 (keycode d).
+Jul 24 11:46:32 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 35 with keysym 35 (keycode e).
+Jul 24 11:46:32 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 36 with keysym 36 (keycode f).
+Jul 24 11:46:32 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 37 with keysym 37 (keycode 10).
+Jul 24 12:09:45 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 31 with keysym 31 (keycode a).
+Jul 24 12:09:45 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 38 with keysym 38 (keycode 11).
+Jul 24 12:09:45 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 39 with keysym 39 (keycode 12).
+Jul 24 12:09:45 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 32 with keysym 32 (keycode b).
+Jul 24 12:09:45 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 33 with keysym 33 (keycode c).
+Jul 24 12:09:45 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 34 with keysym 34 (keycode d).
+Jul 24 12:09:45 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 35 with keysym 35 (keycode e).
+Jul 24 12:09:45 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 36 with keysym 36 (keycode f).
+Jul 24 12:09:45 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 37 with keysym 37 (keycode 10).
+Jul 24 12:14:42 AHMLPT1108 gnome-shell[5795]: Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x6000007
+Jul 24 12:17:58 AHMLPT1108 gnome-shell[2988563]: Warning: disabling flag --expose_wasm due to conflicting flags
+Jul 24 13:46:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 31 with keysym 31 (keycode a).
+Jul 24 13:46:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 32 with keysym 32 (keycode b).
+Jul 24 13:46:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 33 with keysym 33 (keycode c).
+Jul 24 13:46:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 34 with keysym 34 (keycode d).
+Jul 24 13:46:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 35 with keysym 35 (keycode e).
+Jul 24 13:46:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 36 with keysym 36 (keycode f).
+Jul 24 13:46:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 37 with keysym 37 (keycode 10).
+Jul 24 13:46:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 38 with keysym 38 (keycode 11).
+Jul 24 13:46:31 AHMLPT1108 gnome-shell[5795]: Window manager warning: Overwriting existing binding of keysym 39 with keysym 39 (keycode 12).
+Jul 24 13:46:51 AHMLPT1108 /usr/lib/gdm3/gdm-x-session[5358]: (EE) event11 - DELL0816:00 044E:120A Touchpad: WARNING: log rate limit exceeded (5 msgs per 7200000ms). Discarding future messages.
+Jul 24 15:26:29 AHMLPT1108 jenkins[1909335]: 2024-07-24 09:56:29.839+0000 [id=2983]#011WARNING#011h.i.i.InstallUncaughtExceptionHandler#handleException: Caught unhandled exception with ID 9de15b14-bc29-46fc-9d3b-b00699b0e244
+Jul 24 15:26:38 AHMLPT1108 jenkins[1909335]: 2024-07-24 09:56:38.016+0000 [id=3021]#011WARNING#011h.i.i.InstallUncaughtExceptionHandler#handleException: Caught unhandled exception with ID 9a6cafef-26f0-4ed3-926f-b0c0fc5c56f1
+Jul 24 15:41:51 AHMLPT1108 Microsoft.CodeAnalysis.LanguageServer: ServiceBroker Warning: 3 : 
+Jul 24 15:41:51 AHMLPT1108 Microsoft.CodeAnalysis.LanguageServer: ServiceBroker Warning: 2 : 
+Jul 24 15:41:51 AHMLPT1108 Microsoft.CodeAnalysis.LanguageServer: ServiceBroker Warning: 3 : 
+Jul 24 15:41:51 AHMLPT1108 Microsoft.CodeAnalysis.LanguageServer: ServiceBroker Warning: 2 : 
+Jul 24 15:41:52 AHMLPT1108 Microsoft.VisualStudio.Code.Server: Microsoft.VisualStudio.Server.Main Warning: 2 : 
+Jul 24 15:41:52 AHMLPT1108 Microsoft.VisualStudio.Code.Server: Microsoft.VisualStudio.Server.Main Warning: 2 : 
+Jul 24 15:41:52 AHMLPT1108 Microsoft.CodeAnalysis.LanguageServer: ServiceBroker Warning: 2 : 
+Jul 24 15:41:52 AHMLPT1108 Microsoft.CodeAnalysis.LanguageServer: ServiceBroker Warning: 2 : 
+Jul 24 15:41:53 AHMLPT1108 Microsoft.VisualStudio.Code.Server: Microsoft.VisualStudio.Server.Main Warning: 2 : 
+Jul 24 15:41:53 AHMLPT1108 Microsoft.CodeAnalysis.LanguageServer: ServiceBroker Warning: 2 : 
+Jul 24 15:41:53 AHMLPT1108 Microsoft.VisualStudio.Code.Server: Microsoft.VisualStudio.Server.Main Warning: 2 : 
+Jul 24 15:41:53 AHMLPT1108 Microsoft.CodeAnalysis.LanguageServer: ServiceBroker Warning: 2 : 
+Binary file /var/log/syslog matches
+CRITICAL:
+-------------------------------------------------------------------------------
+Health Checks
+Performing Health Checks...
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Wed 2024-07-24 16:01:57 IST; 6 days ago
+       Docs: https://httpd.apache.org/docs/2.4/
+
+Jul 24 16:01:57 AHMLPT1108 apachectl[1183]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Jul 24 16:01:57 AHMLPT1108 apachectl[1183]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+Jul 24 16:01:57 AHMLPT1108 apachectl[1183]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
+Jul 24 16:01:57 AHMLPT1108 apachectl[1183]: no listening sockets available, shutting down
+Jul 24 16:01:57 AHMLPT1108 apachectl[1183]: AH00015: Unable to open logs
+Jul 24 16:01:57 AHMLPT1108 apachectl[1153]: Action 'start' failed.
+Jul 24 16:01:57 AHMLPT1108 apachectl[1153]: The Apache error log may have more information.
+Jul 24 16:01:57 AHMLPT1108 systemd[1]: apache2.service: Control process exited, code=exited, status=1/FAILURE
+Jul 24 16:01:57 AHMLPT1108 systemd[1]: apache2.service: Failed with result 'exit-code'.
+Jul 24 16:01:57 AHMLPT1108 systemd[1]: Failed to start The Apache HTTP Server.
+-------------------------------------
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2024-07-24 16:02:00 IST; 6 days ago
+   Main PID: 1410 (mysqld)
+     Status: "Server is operational"
+      Tasks: 37 (limit: 18905)
+     Memory: 7.5M
+     CGroup: /system.slice/mysql.service
+             └─1410 /usr/sbin/mysqld
+
+Jul 24 16:01:57 AHMLPT1108 systemd[1]: Starting MySQL Community Server...
+Jul 24 16:02:00 AHMLPT1108 systemd[1]: Started MySQL Community Server.
+-------------------------------------
+Verifying Connectivity to External Services:
+PING google.com (142.250.66.14) 56(84) bytes of data.
+64 bytes from bom07s35-in-f14.1e100.net (142.250.66.14): icmp_seq=1 ttl=117 time=12.5 ms
+64 bytes from bom07s35-in-f14.1e100.net (142.250.66.14): icmp_seq=2 ttl=117 time=14.1 ms
+64 bytes from bom07s35-in-f14.1e100.net (142.250.66.14): icmp_seq=3 ttl=117 time=12.0 ms
+64 bytes from bom07s35-in-f14.1e100.net (142.250.66.14): icmp_seq=4 ttl=117 time=14.4 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 12.012/13.260/14.422/1.041 ms
+-------------------------------------
+MySQL Database connection Failed
+-------------------------------------------------------------------------------
+Checking the CPU and MEMORY Usage: 
+High CPU or Memory usage is Detected: CPU ( %) and MEMORY (76 %)
+-------------------------------------------------------------------------------
