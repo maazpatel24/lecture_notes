@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+
+    environment {
+        MAVEN_HOME = tool 'Maven-3.9.0' // Ensure this matches your Maven tool name
+    }
+
+    stages {
+        stage('CheckOut') {
+            steps {
+                // Checkout code from Git repository
+                git credentialsId: 'git-access', url: 'https://github.com/maazpatel24/DevOpsClassCode.git' 
+            }
+        }
+        stage('Build') {
+            steps {
+                // Build the project using Maven
+                script {
+                    withEnv(["PATH+MAVEN=${MAVEN_HOME}/bin"]) {
+                        sh 'mvn clean install'
+                    }
+                }
+            }
+        }
+        stage('Test') {
+            // Run tests using Maven
+            steps {
+                script {
+                    withEnv(["PATH+MAVEN=${MAVEN_HOME}/bin"]) {
+                        sh 'mvn clean install'
+                    }
+                }
+            }
+        }
+        stage('Archive Artifacts') {
+            steps {
+                // Archive the built artifacts
+                archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline finished.'
+        }
+        success {
+            echo 'Pipeline succeeded.'
+        }
+        failure {
+            echo 'Pipeline failed.'
+        }
+    }
+}
