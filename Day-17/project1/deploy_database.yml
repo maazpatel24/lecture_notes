@@ -1,16 +1,15 @@
 - hosts: db
-  become: true
-
+  become: yes
+# sudo -u postgres psql
   vars:
     postgresql_version: 12
     postgresql_user: postgres
     postgresql_group: postgres
     postgresql_packages:
-      - postgresql
-      - postgresql-contrib
+      - postgresql-{{ postgresql_version }}
+      - postgresql-contrib-{{ postgresql_version }}
       - libpq-dev
-      - python3-pip
-    postgresql_python_library: python3-psycopg2
+
     postgresql_hba_entries:
       - {type: local, database: all, user: postgres, auth_method: peer}
       - {type: local, database: all, user: all, auth_method: md5}
@@ -19,14 +18,44 @@
       - {type: local, database: replication, user: all, auth_method: peer}
       - {type: host, database: replication, user: all, address: '127.0.0.1/32', auth_method: md5}
       - {type: host, database: replication, user: all, address: '::1/128', auth_method: md5}
+      # - {type: host, database: "{{ db_name }}", user: "{{ db_user }}", address: '0.0.0.0/0', auth_method: md5} # unsecured
+    postgresql_data_dir: "/var/lib/postgresql/{{ postgresql_version }}/main"
+    postgresql_bin_setup: "/usr/lib/postgresql/{{ postgresql_version }}/bin/pg_isready"
+    postgresql_bin_path: "/usr/lib/postgresql/{{ postgresql_version }}/bin"
+    postgresql_config_path: "/etc/postgresql/{{ postgresql_version }}/main"
     db_user: eic
     db_password: eic
     db_name: database1
     postgres_password: password
+    postgresql_unix_socket_directories:
+      - /var/run/postgresql
+    postgresql_global_config_options:
+      - option: unix_socket_directories
+        value: '{{ postgresql_unix_socket_directories | join(",") }}'
+      - option: log_directory
+        value: 'log'
+    backup_dir: /var/backups/postgresql
 
   tasks:
+# PSQL Installtion
     - name: Update apt cache
-      ansible.builtin.apt: update_cache=yes
+      ansible.builtin.apt: 
+        update_cache: yes 
+
+    - name: Install Python and pip
+      ansible.builtin.apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - python3
+        - python3-pip
+        - python3-psycopg2
+    
+    # - name: "Install Python packages using pip"
+    #   become: yes
+    #   ansible.builtin.pip: "name={{ item }}  state=present"
+    #   with_items:
+    #     - psycopg2-binary
 
     - name: Add the PostgreSQL APT key
       ansible.builtin.apt_key:
@@ -39,32 +68,94 @@
         state: present
 
     - name: Update apt cache
-      ansible.builtin.apt: update_cache=yes
+      ansible.builtin.apt: 
+        update_cache: yes 
 
-    - name: Install PostgreSQL
-      apt:
-        name: postgresql-{{ postgresql_version }}
+    - name: Install PostgreSQL and related packages
+      ansible.builtin.apt:
+        name: "{{ item }}"
         state: present
-    
-    # - name: "Install packages"
-    #   ansible.builtin.apt: 
-    #     name: "{{ item }}"
-    #     update_cache: true
-    #     state: present
-    #   with_items: "{{ postgresql_packages }}"
-
-    # - name: "Install Python packages"
-    #   ansible.builtin.apt: 
-    #     name: "{{ postgresql_python_library }}"
-    #     state: present
-    #   environment: []
+      with_items: "{{ postgresql_packages }}"
 
     - name: "Start and enable services"
       ansible.builtin.service:
         name: postgresql
         state: started
-        enabled: true
-      
+        enabled: yes
+#----------------------------------------------------------------------------------
+# Initialization
+
+    - name: Ensure PostgreSQL data directory exists.
+      file:
+        path: "{{ postgresql_data_dir }}"
+        owner: "{{ postgresql_user }}"
+        group: "{{ postgresql_group }}"
+        state: directory
+        mode: 0700
+
+    - name: Check if Postgresql {{ postgresql_version }} is initialized?.
+      ansible.builtin.stat:
+        path: "{{ postgresql_data_dir }}/PG_VERSION"
+      register: pgdata_version
+    
+    - name: "msg"
+      ansible.builtin.debug:
+        msg: "{{ pgdata_version }}"
+
+    # - name: Ensure PostgreSQL {{ postgresql_version }} database is initialized.
+    #   ansible.builtin.command: "{{ postgresql_bin_setup }}"
+    #   become: yes
+    #   when: not pgdata_version.stat.exists
+    #   notify: restart postgresql
+
+    - name: Ensure PostgreSQL database is initialized.
+      ansible.builtin.command: "{{ postgresql_bin_path }}/initdb -D {{ postgresql_data_dir }}"
+      when: not pgdata_version.stat.exists
+      become: yes
+      become_user: "{{ postgresql_user }}"
+
+#----------------------------------------------------------------------------------
+# Configuration Steps
+
+    - name: Configure global settings.
+      lineinfile:
+        dest: "{{ postgresql_config_path }}/postgresql.conf"
+        regexp: "^#?{{ item.option }}.+$"
+        line: "{{ item.option }} = '{{ item.value }}'"
+        state: "{{ item.state | default('present') }}"
+        mode: 0644
+      with_items: "{{ postgresql_global_config_options }}"
+      notify: restart postgresql
+
+    - name: Configure host based authentication (if entries are configured).
+      template:
+        src: "pg_hba.conf.j2"
+        dest: "{{ postgresql_config_path }}/pg_hba.conf"  # postgresql_config_path: "/etc/postgresql/{{ postgresql_version }}/main"
+        owner: "{{ postgresql_user }}"
+        group: "{{ postgresql_group }}"
+        mode: 0600
+      notify: restart postgresql
+      when: postgresql_hba_entries | length > 0
+      become: yes
+    
+    - name: Ensure PostgreSQL unix socket dirs exist.
+      file:
+        path: "{{ item }}"
+        state: directory
+        owner: "{{ postgresql_user }}"
+        group: "{{ postgresql_user }}"
+        mode: 0755
+      with_items: "{{ postgresql_unix_socket_directories }}"
+#----------------------------------------------------------------------------------
+# User and Database creation
+
+    - name: Set password for the default PostgreSQL user
+      community.postgresql.postgresql_user:
+        name: postgres
+        password: "{{ postgres_password }}"
+      become: yes
+      become_user: postgres
+
     - name: "Create app database"
       community.postgresql.postgresql_db:
         state: present
@@ -80,7 +171,7 @@
       become: yes
       become_user: postgres
 
-    - name: "Grant db user access to app db"
+    - name: "Grant db user access to db"
       community.postgresql.postgresql_privs:
         type: database
         database: "{{ db_name }}"
@@ -89,11 +180,38 @@
         privs: all
       become: yes
       become_user: postgres
-    
-    - name: PostgreSQL Client Authentication Configuration File
-      template:
-        src: "templates/pg_hba.conf.j2"
-        dest: "/usr/local/pgsql/data/pg_hba.conf"
-        owner: "{{ postgresql_user }}"
-        group: "{{ postgresql_user }}"
-        mode: 0600
+
+#----------------------------------------------------------------------------------
+# Backup Script
+
+    - name: Create backup directory
+      ansible.builtin.file:
+        path: "{{ backup_dir }}"
+        state: directory
+        owner: postgres
+        group: postgres
+        mode: '0755'
+
+    - name: Deploy backup script
+      ansible.builtin.copy:
+        src: scripts/backup.sh
+        dest: "{{ backup_dir }}/backup.sh"
+        mode: '0755'
+
+    - name: Set up cron job for backups
+      ansible.builtin.cron:
+
+        name: "PostgreSQL Backup"
+        user: postgres
+        job: "{{ backup_dir }}/backup.sh {{ db_name }} {{ db_user }} {{ db_password }} {{ backup_dir }}"
+        minute: "0"
+        hour: "2"
+        state: present
+
+#----------------------------------------------------------------------------------
+
+  handlers:
+  - name: restart postgresql
+    ansible.builtin.service:
+      name: postgresql
+      state: restarted
