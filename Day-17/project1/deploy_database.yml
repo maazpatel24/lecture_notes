@@ -98,9 +98,9 @@
         path: "{{ postgresql_data_dir }}/PG_VERSION"
       register: pgdata_version
     
-    - name: "msg"
-      ansible.builtin.debug:
-        msg: "{{ pgdata_version }}"
+    # - name: "msg"
+    #   ansible.builtin.debug:
+    #     msg: "{{ pgdata_version }}"
 
     # - name: Ensure PostgreSQL {{ postgresql_version }} database is initialized.
     #   ansible.builtin.command: "{{ postgresql_bin_setup }}"
