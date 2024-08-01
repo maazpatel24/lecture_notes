@@ -1,0 +1,123 @@
+---
+- hosts: all
+  become: yes
+
+  vars:
+    #MySQL Settings
+    mysql_root_password: "mysql_root_password"
+    mysql_db: "my_db"
+    mysql_user: "maaz"
+    mysql_password: "password"
+    
+    #HTTP Settings
+    http_host: "mysite.com"
+    http_conf: "mysite.conf"
+    http_port: "80"
+
+  tasks:
+    - name: Install prerequisites
+      apt: name=aptitude update_cache=yes state=latest force_apt_get=yes
+      tags: [ packages ]
+
+    - name: Install Apache web server
+      apt:
+        name: apache2
+        update_cache: yes
+        state: latest
+      tags: [ packages ]
+
+    - name: Create Document root
+      file:
+        path: "/var/www/html/{{ http_host }}"
+        state: directory
+        owner: "www-data"
+        group: "www-data"
+        mode: '0755'
+      tags: [ apache ]
+
+    - name: Deploy Application files
+      copy:
+        src: files/index.html
+        dest: "/var/www/html/{{ http_host }}/index.html"
+      tags: [ apache ]
+
+    - name: Set up Apache VirtualHost
+      template:
+        src: "templates/app_config.php.j2"
+        dest: "/etc/apache2/sites-available/{{ http_conf }}"
+      notify: Reload Apache
+      tags: [ apache ]
+
+    - name: Enable rewrite module
+      shell: /usr/sbin/a2enmod rewrite
+      notify: Reload Apache
+      tags: [ apache ]
+
+    - name: Enable new site
+      shell: /usr/sbin/a2ensite {{ http_conf }}
+      notify: Reload Apache
+      tags: [ apache ]
+
+    - name: Disable default Apache site
+      shell: /usr/sbin/a2dissite 000-default.conf
+      notify: Restart Apache
+      tags: [ apache ]
+
+    - name: Install MySQL Packages
+      apt: name={{ item }} update_cache=yes state=latest
+      loop: [ 'mysql-server', 'python3-pymysql']
+      tags: [ packages ]
+
+    - name: Set the root password
+      mysql_user:
+        name: root
+        password: "{{ mysql_root_password }}"
+        login_unix_socket: /var/run/mysqld/mysqld.sock
+      tags: [ mysql, mysql-root ]
+
+    - name: Remove all anonymous user accounts
+      mysql_user:
+        name: ''
+        host_all: yes
+        state: absent
+        login_user: root
+        login_password: "{{ mysql_root_password }}"
+      tags: [ mysql ]
+
+    - name: Remove the MySQL test database
+      mysql_db:
+        name: test
+        state: absent
+        login_user: root
+        login_password: "{{ mysql_root_password }}"
+      tags: [ mysql ]
+
+    - name: Creates database 
+      mysql_db:
+        name: "{{ mysql_db }}"
+        state: present
+        login_user: root
+        login_password: "{{ mysql_root_password }}"
+      tags: [ mysql ]
+
+    - name: Create MySQL user
+      mysql_user:
+        name: "{{ mysql_user }}"
+        password: "{{ mysql_password }}"
+        priv: "{{ mysql_db }}.*:ALL"
+        state: present
+        login_user: root
+        login_password: "{{ mysql_root_password }}"
+      tags: [ mysql ]
+
+  handlers:
+      - name: Reload Apache
+        service:
+          name: apache2
+          state: reloaded
+    
+      - name: Restart Apache
+        service:
+          name: apache2
+          state: restarted
+
