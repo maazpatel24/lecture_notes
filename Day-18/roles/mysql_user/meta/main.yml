@@ -1,0 +1,4 @@
+---
+dependencies: 
+  - role: mysql_install
+  - role: mysql_config

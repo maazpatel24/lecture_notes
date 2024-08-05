@@ -1,0 +1,9 @@
+---
+# tasks file for roles/mysql_install
+- name: Install MySQL Packages
+  ansible.builtin.apt: 
+    name: "{{ item }}"
+    update_cache: yes 
+    state: latest
+  loop: [ 'mysql-server', 'python3-pymysql']
+  tags: [ mysql_install ]

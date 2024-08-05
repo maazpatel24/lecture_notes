@@ -1,0 +1,20 @@
+---
+# tasks file for roles/firewall
+- name: Allow Nginx HTTP through the firewall
+  community.general.ufw:
+    rule: allow
+    name: "Nginx HTTP"
+    state: enabled
+  tags: [ firewall ]
+
+- name: Allow Nginx HTTPS through the firewall
+  community.general.ufw:
+    rule: allow
+    name: "Nginx HTTPS"
+    state: enabled
+  tags: [ firewall ]
+
+- name: Ensure UFW is enabled
+  community.general.ufw:
+    state: enabled
+  tags: [ firewall ]

@@ -1,0 +1,11 @@
+---
+- name: Deploy MySQL configuration file
+  template:
+    src: my.cnf.j2
+    dest: /etc/mysql/my.cnf
+    owner: mysql
+    group: mysql
+    mode: '0644'
+  notify: Restart MySQL
+  tags: [ mysql_config ]
+

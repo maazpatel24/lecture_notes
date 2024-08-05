@@ -1,0 +1,25 @@
+[mysqld]
+user            = mysql
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+port            = 3306
+basedir         = /usr
+datadir         = /var/lib/mysql
+tmpdir          = /tmp
+lc-messages-dir = /usr/share/mysql
+skip-external-locking
+
+bind-address    = 0.0.0.0
+
+{% if innodb_buffer_pool_size is defined %}
+innodb_buffer_pool_size = {{ innodb_buffer_pool_size }}
+{% endif %}
+
+{% if max_connections is defined %}
+max_connections = {{ max_connections }}
+{% endif %}
+
+# Custom settings
+{% for setting, value in custom_settings.items() %}
+{{ setting }} = {{ value }}
+{% endfor %}
