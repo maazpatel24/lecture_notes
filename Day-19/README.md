@@ -221,7 +221,6 @@ Tags:
     python3 dynamic_inventory > inventory.json
     ```
     ```json
-    // inventory.json
     {
       "all": {
         "hosts": [
