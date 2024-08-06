@@ -1,2 +1,34 @@
 ---
 # tasks file for roles/webserver
+
+- name: Install prerequisites
+  ansible.builtin.apt: name=aptitude update_cache=yes state=latest force_apt_get=yes
+  tags: [ nginx ]
+
+- name: Install Nginx
+  ansible.builtin.apt: 
+    name: nginx 
+    state: present 
+    update_cache: yes
+  tags: [ nginx ]
+
+- name: Start and Enable Nginx
+  ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: yes
+  tags: [ nginx ]
+
+- name: Deploy Nginx cofiguration file
+  ansible.builtin.template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+  notify: Restart Nginx
+  tags: [ nginx ]
+
+- name: Deploy website
+  ansible.builtin.copy:
+    src: files/index.html
+    dest: /var/www/html/index.html
+  tags: [ website ]
+    

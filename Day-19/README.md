@@ -26,6 +26,11 @@ Tags:
 ## Milestone 1: Environment Setup
 
 **Objective:** Configure your development environment and AWS infrastructure.
+
+**Tasks:**
++ Launch an AWS EC2 instance running Ubuntu.
++ Install Ansible and Git on your local machine or control node.
+
 + Install `aws-cli`
 
     ```bash
@@ -33,7 +38,7 @@ Tags:
     unzip awscliv2.zip
     sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
     ```
-+ To configure aws credentials
++ Configure aws credentials run:
     ```bash
     aws configure 
     # Will prompt to enter 
@@ -43,10 +48,6 @@ Tags:
     # Default output format [None]:
     ```
 
-**Tasks:**
-+ Launch an AWS EC2 instance running Ubuntu.
-+ Install Ansible and Git on your local machine or control node.
-
 **Deliverables:**
 + AWS EC2 instance running Ubuntu.
 + Local or remote control node with Ansible and Git installed.
@@ -54,6 +55,7 @@ Tags:
 ## Milestone 2: Create Ansible Role Structure
 
 **Objective:** Organize your Ansible project using best practices for playbooks and roles.
+
 **Tasks:**
 + Use Ansible Galaxy to create roles for web server, database, and application deployment.
     ```bash
@@ -123,6 +125,7 @@ Tags:
 ## Milestone 3: Version Control with Git
 
 **Objective:** Implement version control for your Ansible project.
+
 **Tasks:**
 + Initialize a Git repository in your project directory.
 + Create a `.gitignore` file to exclude unnecessary files.
@@ -133,7 +136,7 @@ Tags:
     git push origin <branch_name>
     ```
 
-![Alt text](image.png)
+    ![Alt text](imgs/image.png)
 
 **Deliverables:**
 + Git repository with initial Ansible codebase.
@@ -142,6 +145,7 @@ Tags:
 ## Milestone 4: Develop Ansible Roles
 
 **Objective:** Write Ansible roles for web server, database, and application deployment.
+
 **Tasks:**
 + Define tasks, handlers, files, templates, and variables within each role.
     ```bash
@@ -156,7 +160,9 @@ Tags:
 + Completed Ansible roles for webserver, database, and application.
 
 ## Milestone 5: Documentation and Maintenance
+
 **Objective:** Document your Ansible roles and playbooks for future maintenance.
+
 **Tasks:**
 + Create README.md files for each role explaining purpose, variables, tasks, and handlers.
 + Add comments within your playbooks and roles to explain complex logic.
@@ -165,7 +171,9 @@ Tags:
 + Well-documented playbooks and roles.
 
 ## Milestone 6: Dynamic Inventory Script
+
 **Objective:** Use dynamic inventory scripts to manage AWS EC2 instances.
+
 **Tasks:**
 + Write a Python script that queries AWS to get the list of EC2 instances.
     ```py
@@ -238,7 +246,7 @@ Tags:
     ```bash
     pip3 install boto3
     ```
-    ![boto3 dependency](image-1.png)
+    ![boto3 dependency](imgs/image-1.png)
 
 + Also configure your `ansible.cfg` to use dynamic_inventory.py as inventory file.
     ```cfg
@@ -250,16 +258,26 @@ Tags:
     ```bash
     ansible all -m ping
     ```
-![ping using dynamic-inventory](image-2.png)
+    ![ping using dynamic-inventory](imgs/image-2.png)
+
 **Deliverables:**
 + Dynamic inventory script to fetch EC2 instance details.
 
 ## Milestone 7: Playbook Development and Deployment
+
 **Objective:** Create and execute an Ansible playbook to deploy the web application.
+
 **Tasks:**
 + Develop a master playbook that includes all roles.
 + Define inventory and variable files for different environments.
 + Execute the playbook to deploy the web application on the EC2 instance.
+
+    ![Alt text](imgs/image-3.png)
+
++ Web App running on serever.
+
+    ![Alt text](imgs/image-4.png)
+
 **Deliverables:**
 + Ansible playbook for web application deployment.
 + Successfully deployed web application on the EC2 instance.

@@ -1,2 +1,61 @@
 ---
 # tasks file for roles/database
+- name: Install MySQL Packages
+  ansible.builtin.apt: 
+    name: "{{ item }}"
+    update_cache: yes 
+    state: latest
+  loop: [ 'mysql-server', 'python3-pymysql']
+  tags: [ mysql_install ]
+
+# - name: Deploy MySQL configuration file
+#   template:
+#     src: my.cnf.j2
+#     dest: /etc/mysql/my.cnf
+#     owner: mysql
+#     group: mysql
+#     mode: '0644'
+#   notify: Restart MySQL
+#   tags: [ mysql_config ]
+
+- name: Set the root password
+  mysql_user:
+    name: root
+    password: "{{ mysql_root_password }}"
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+  tags: [ mysql_user ]
+
+- name: Remove all anonymous user accounts
+  mysql_user:
+    name: ''
+    host_all: yes
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+  tags: [ mysql_user ]
+
+- name: Remove the MySQL test database
+  mysql_db:
+    name: test
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+  tags: [ mysql_user ]
+
+- name: Creates database for WordPress
+  mysql_db:
+    name: "{{ mysql_db }}"
+    state: present
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+  tags: [ mysql_user ]
+
+- name: Create MySQL user for WordPress
+  mysql_user:
+    name: "{{ mysql_user }}"
+    password: "{{ mysql_password }}"
+    priv: "{{ mysql_db }}.*:ALL"
+    state: present
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+  tags: [ mysql_user ]
