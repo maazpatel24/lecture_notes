@@ -1,0 +1,51 @@
+Running System Performance Metrics Check at Thu 08 Aug 2024 10:56:15 PM IST
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+udev            7.7G     0  7.7G   0% /dev
+tmpfs           1.6G  2.4M  1.6G   1% /run
+/dev/sda3        94G   57G   32G  65% /
+tmpfs           7.8G  315M  7.5G   4% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           7.8G     0  7.8G   0% /sys/fs/cgroup
+/dev/loop0      128K  128K     0 100% /snap/bare/5
+/dev/loop2      105M  105M     0 100% /snap/core/17200
+/dev/loop1      164M  164M     0 100% /snap/chromium/2890
+/dev/loop3       64M   64M     0 100% /snap/core20/2264
+/dev/loop4       56M   56M     0 100% /snap/core18/2823
+/dev/loop6       64M   64M     0 100% /snap/core20/2318
+/dev/loop7       67M   67M     0 100% /snap/cups/1052
+/dev/loop5      104M  104M     0 100% /snap/core/16928
+/dev/loop26      39M   39M     0 100% /snap/snapd/21759
+/dev/loop8       56M   56M     0 100% /snap/core18/2829
+/dev/loop9       68M   68M     0 100% /snap/cups/1058
+/dev/loop17      92M   92M     0 100% /snap/gtk-common-themes/1535
+/dev/loop13     497M  497M     0 100% /snap/gnome-42-2204/141
+/dev/loop16      84M   84M     0 100% /snap/outlook-for-linux/18
+/dev/loop23      13M   13M     0 100% /snap/snap-store/959
+/dev/loop14     350M  350M     0 100% /snap/gnome-3-38-2004/143
+/dev/loop12     167M  167M     0 100% /snap/chromium/2923
+/dev/loop11      75M   75M     0 100% /snap/core22/1439
+/dev/loop22      66M   66M     0 100% /snap/gtk-common-themes/1519
+/dev/loop10      75M   75M     0 100% /snap/core22/1380
+/dev/loop27     4.3M  4.3M     0 100% /snap/tree/18
+/dev/loop21      13M   13M     0 100% /snap/snap-store/1113
+/dev/loop24      39M   39M     0 100% /snap/snapd/21465
+/dev/loop15      37M   37M     0 100% /snap/gh/502
+/dev/loop25      88M   88M     0 100% /snap/teams-for-linux/649
+/dev/loop20      79M   79M     0 100% /snap/office365webdesktop/5
+/dev/loop18     506M  506M     0 100% /snap/gnome-42-2204/176
+/dev/loop19     165M  165M     0 100% /snap/gnome-3-28-1804/198
+/dev/loop29     249M  249M     0 100% /snap/gnome-3-38-2004/99
+/dev/loop28      88M   88M     0 100% /snap/teams-for-linux/645
+/dev/sda4       359G  182G  159G  54% /home
+/dev/sda2       976M  6.1M  970M   1% /boot/efi
+tmpfs           1.6G   60K  1.6G   1% /run/user/1000
+
+Memory Usage:
+              total        used        free      shared  buff/cache   available
+Mem:           15Gi       7.7Gi       1.1Gi       1.2Gi       6.7Gi       6.2Gi
+Swap:          14Gi       0.0Ki        14Gi
+
+CPU Load:
+%Cpu(s): 15.3 us,  6.1 sy,  0.0 ni, 78.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+
