@@ -1,0 +1,285 @@
+[0m[1maws_s3_bucket.app_bucket: Refreshing state... [id=shopmax-static-chirag][0m
+[0m[1maws_vpc.ProjectVPC: Refreshing state... [id=vpc-0c2767f35b66616d1][0m
+[0m[1maws_subnet.Project_private_subnet1: Refreshing state... [id=subnet-0ff4af0f365145026][0m
+[0m[1maws_subnet.Project_private_subnet2: Refreshing state... [id=subnet-013f036ec72987ad6][0m
+[0m[1maws_security_group.ec2_sg_ssh: Refreshing state... [id=sg-06d1cfe3556c81799][0m
+[0m[1maws_db_subnet_group.rds_subnet_group: Refreshing state... [id=rds_subnet_group][0m
+[0m[1maws_security_group.ec2_rds_ssh: Refreshing state... [id=sg-0873eadd4a151f852][0m
+[0m[1maws_db_instance.appdb: Refreshing state... [id=db-DYUW575J32OHDBO2DLMF7STLLI][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # aws_db_subnet_group.rds_subnet_group[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_db_subnet_group" "rds_subnet_group" {
+      [31m-[0m[0m arn                     = "arn:aws:rds:us-west-2:326151034032:subgrp:rds_subnet_group" [90m-> null[0m[0m
+      [31m-[0m[0m description             = "Managed by Terraform" [90m-> null[0m[0m
+      [31m-[0m[0m id                      = "rds_subnet_group" [90m-> null[0m[0m
+      [31m-[0m[0m name                    = "rds_subnet_group" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_ids              = [
+          [31m-[0m[0m "subnet-013f036ec72987ad6",
+          [31m-[0m[0m "subnet-0ff4af0f365145026",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m supported_network_types = [
+          [31m-[0m[0m "IPV4",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags                    = {
+          [31m-[0m[0m "Name" = "RDS Subnet Group"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                = {
+          [31m-[0m[0m "Name" = "RDS Subnet Group"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                  = "vpc-0c2767f35b66616d1" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # aws_s3_bucket.app_bucket[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_s3_bucket" "app_bucket" {
+      [31m-[0m[0m arn                         = "arn:aws:s3:::shopmax-static-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m bucket                      = "shopmax-static-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m bucket_domain_name          = "shopmax-static-chirag.s3.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m bucket_regional_domain_name = "shopmax-static-chirag.s3.us-west-2.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m force_destroy               = false [90m-> null[0m[0m
+      [31m-[0m[0m hosted_zone_id              = "Z3BJ6K6RIION7M" [90m-> null[0m[0m
+      [31m-[0m[0m id                          = "shopmax-static-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m object_lock_enabled         = false [90m-> null[0m[0m
+      [31m-[0m[0m region                      = "us-west-2" [90m-> null[0m[0m
+      [31m-[0m[0m request_payer               = "BucketOwner" [90m-> null[0m[0m
+      [31m-[0m[0m tags                        = {
+          [31m-[0m[0m "Name" = "shopmax-static-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                    = {
+          [31m-[0m[0m "Name" = "shopmax-static-chirag"
+        } [90m-> null[0m[0m
+        [90m# (3 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m grant {
+          [31m-[0m[0m id          = "e9795e149da14393b2aad04fc537a9b533c377ff11f44636857d0be33f7389e7" [90m-> null[0m[0m
+          [31m-[0m[0m permissions = [
+              [31m-[0m[0m "FULL_CONTROL",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m type        = "CanonicalUser" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m server_side_encryption_configuration {
+          [31m-[0m[0m rule {
+              [31m-[0m[0m bucket_key_enabled = false [90m-> null[0m[0m
+
+              [31m-[0m[0m apply_server_side_encryption_by_default {
+                  [31m-[0m[0m sse_algorithm     = "AES256" [90m-> null[0m[0m
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+            }
+        }
+
+      [31m-[0m[0m versioning {
+          [31m-[0m[0m enabled    = false [90m-> null[0m[0m
+          [31m-[0m[0m mfa_delete = false [90m-> null[0m[0m
+        }
+    }
+
+[1m  # aws_security_group.ec2_rds_ssh[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "ec2_rds_ssh" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-west-2:326151034032:security-group/sg-0873eadd4a151f852" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Managed by Terraform" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-0873eadd4a151f852" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 22
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 22
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = []
+              [31m-[0m[0m from_port        = 3306
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = [
+                  [31m-[0m[0m "sg-06d1cfe3556c81799",
+                ]
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 3306
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "terraform-20240820161035976800000003" [90m-> null[0m[0m
+      [31m-[0m[0m name_prefix            = "terraform-" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "Name" = "rds-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "Name" = "rds-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-0c2767f35b66616d1" [90m-> null[0m[0m
+    }
+
+[1m  # aws_security_group.ec2_sg_ssh[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "ec2_sg_ssh" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-west-2:326151034032:security-group/sg-06d1cfe3556c81799" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Managed by Terraform" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-06d1cfe3556c81799" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 22
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 22
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 80
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 80
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "terraform-20240820161030283600000001" [90m-> null[0m[0m
+      [31m-[0m[0m name_prefix            = "terraform-" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "Name" = "ec2-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "Name" = "ec2-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-0c2767f35b66616d1" [90m-> null[0m[0m
+    }
+
+[1m  # aws_subnet.Project_private_subnet1[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "Project_private_subnet1" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-west-2:326151034032:subnet/subnet-0ff4af0f365145026" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-west-2a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "usw2-az1" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.0.2.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-0ff4af0f365145026" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = false [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0c2767f35b66616d1" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # aws_subnet.Project_private_subnet2[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "Project_private_subnet2" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-west-2:326151034032:subnet/subnet-013f036ec72987ad6" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-west-2b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "usw2-az2" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.0.3.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-013f036ec72987ad6" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = false [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0c2767f35b66616d1" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # aws_vpc.ProjectVPC[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_vpc" "ProjectVPC" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-west-2:326151034032:vpc/vpc-0c2767f35b66616d1" [90m-> null[0m[0m
+      [31m-[0m[0m assign_generated_ipv6_cidr_block     = false [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                           = "10.0.0.0/16" [90m-> null[0m[0m
+      [31m-[0m[0m default_network_acl_id               = "acl-0f85f94a575632181" [90m-> null[0m[0m
+      [31m-[0m[0m default_route_table_id               = "rtb-03b4d1fe5ac556799" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id            = "sg-07a1fb568917c3923" [90m-> null[0m[0m
+      [31m-[0m[0m dhcp_options_id                      = "dopt-02000fb8b0a2c3cc6" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_hostnames                 = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_support                   = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_network_address_usage_metrics = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "vpc-0c2767f35b66616d1" [90m-> null[0m[0m
+      [31m-[0m[0m instance_tenancy                     = "default" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_netmask_length                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m main_route_table_id                  = "rtb-03b4d1fe5ac556799" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                             = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Name" = "MyVPC-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Name" = "MyVPC-chirag"
+        } [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 7 to destroy.
+[0m
+Changes to Outputs:
+  [31m-[0m[0m s3_bucket_name = "shopmax-static-chirag" [90m-> null[0m[0m
+[0m[1maws_db_subnet_group.rds_subnet_group: Destroying... [id=rds_subnet_group][0m[0m
+[0m[1maws_s3_bucket.app_bucket: Destroying... [id=shopmax-static-chirag][0m[0m
+[0m[1maws_security_group.ec2_rds_ssh: Destroying... [id=sg-0873eadd4a151f852][0m[0m
+[0m[1maws_s3_bucket.app_bucket: Destruction complete after 2s[0m
+[0m[1maws_db_subnet_group.rds_subnet_group: Destruction complete after 2s[0m
+[0m[1maws_subnet.Project_private_subnet2: Destroying... [id=subnet-013f036ec72987ad6][0m[0m
+[0m[1maws_subnet.Project_private_subnet1: Destroying... [id=subnet-0ff4af0f365145026][0m[0m
+[0m[1maws_security_group.ec2_rds_ssh: Destruction complete after 4s[0m
+[0m[1maws_security_group.ec2_sg_ssh: Destroying... [id=sg-06d1cfe3556c81799][0m[0m
+[0m[1maws_subnet.Project_private_subnet2: Destruction complete after 2s[0m
+[0m[1maws_subnet.Project_private_subnet1: Destruction complete after 2s[0m
+[0m[1maws_security_group.ec2_sg_ssh: Destruction complete after 1s[0m
+[0m[1maws_vpc.ProjectVPC: Destroying... [id=vpc-0c2767f35b66616d1][0m[0m
+[0m[1maws_vpc.ProjectVPC: Destruction complete after 2s[0m
+[0m[1m[32m
+Destroy complete! Resources: 7 destroyed.
+[0m

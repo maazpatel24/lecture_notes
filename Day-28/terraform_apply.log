@@ -1,0 +1,28 @@
+[0m[1maws_iam_instance_profile.ec2_instance_profile: Refreshing state... [id=ec2_instance_profile][0m
+[0m[1maws_vpc.ProjectVPC: Refreshing state... [id=vpc-0c2767f35b66616d1][0m
+[0m[1maws_s3_bucket.app_bucket: Refreshing state... [id=shopmax-static-chirag][0m
+[0m[1maws_internet_gateway.Project_igw: Refreshing state... [id=igw-0caa3477c0b7d20f3][0m
+[0m[1maws_subnet.Project_private_subnet2: Refreshing state... [id=subnet-013f036ec72987ad6][0m
+[0m[1maws_subnet.Project_public_subnet: Refreshing state... [id=subnet-09b42380df671e7ec][0m
+[0m[1maws_subnet.Project_private_subnet1: Refreshing state... [id=subnet-0ff4af0f365145026][0m
+[0m[1maws_security_group.ec2_sg_ssh: Refreshing state... [id=sg-06d1cfe3556c81799][0m
+[0m[1maws_route_table.Project_public_rt: Refreshing state... [id=rtb-04b004021e0544cac][0m
+[0m[1maws_db_subnet_group.rds_subnet_group: Refreshing state... [id=rds_subnet_group][0m
+[0m[1maws_route_table_association.Project_public_rt_assoc: Refreshing state... [id=rtbassoc-063770210b22faffb][0m
+[0m[1maws_security_group.ec2_rds_ssh: Refreshing state... [id=sg-0873eadd4a151f852][0m
+[0m[1maws_instance.webserver: Refreshing state... [id=i-07517f07ea4cf2896][0m
+[0m[1maws_s3_bucket_policy.s3_policy: Refreshing state... [id=shopmax-static-chirag][0m
+[0m[1maws_db_instance.appdb: Refreshing state... [id=db-DYUW575J32OHDBO2DLMF7STLLI][0m
+
+[0m[1m[32mNo changes.[0m[1m Your infrastructure matches the configuration.[0m
+
+[0mTerraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.
+[0m[1m[32m
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+[0m[0m[1m[32m
+Outputs:
+
+[0mec2_public_ip = "54.148.32.102"
+rds_endpoint = "terraform-20240820161040009700000004.cdw6myo0oi1c.us-west-2.rds.amazonaws.com:3306"
+s3_bucket_name = "shopmax-static-chirag"
