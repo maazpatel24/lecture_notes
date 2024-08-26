@@ -13,7 +13,7 @@ resource "aws_instance" "webserver" {
   connection {
     type        = "ssh"
     user        = "ubuntu"
-    private_key = file("/home/einfochips/Downloads/Ansible/terraform-chirag-key.pem")
+    private_key = file("/home/einfochips/Downloads/Ansible/terraform-maaz-key.pem")
     host        = self.public_ip
  
   }
@@ -36,7 +36,7 @@ resource "aws_eip" "my_eip" {
   domain = "vpc"
   # instance = aws_instance.webserver.id
   tags = {
-    Name = "eip-chirag-${terraform.workspace}"
+    Name = "eip-maaz-${terraform.workspace}"
   }
 }
 

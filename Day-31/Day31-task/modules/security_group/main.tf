@@ -32,7 +32,7 @@ resource "aws_security_group" "ec2_sg" {
   }
 
   tags = {
-    Name = "${terraform.workspace}-ec2-sg-chirag"
+    Name = "${terraform.workspace}-ec2-sg-maaz"
   }
 }
 
@@ -56,6 +56,6 @@ resource "aws_security_group" "rds_sg" {
   }
 
   tags = {
-    Name = "${terraform.workspace}-rds-sg-chirag"
+    Name = "${terraform.workspace}-rds-sg-maaz"
   }
 }

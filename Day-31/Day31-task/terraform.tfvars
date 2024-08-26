@@ -1,11 +1,11 @@
 # ec2 Instance
 ami = "ami-05134c8ef96964280"
-instance_name = "webserver-chirag"
+instance_name = "webserver-maaz"
 instance_type = "t2.micro"
-key_pair_name = "terraform-chirag-key"
+key_pair_name = "terraform-maaz-key"
 
 # s3 bucket
-bucket_name = "day31-chirag"
+bucket_name = "day31-maaz"
 
 # rds
 rds_instance_type = "db.t3.micro"

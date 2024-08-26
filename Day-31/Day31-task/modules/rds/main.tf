@@ -12,7 +12,7 @@ resource "aws_db_instance" "example" {
   db_subnet_group_name   = var.rds_subnet_group_name
   vpc_security_group_ids = [var.rds_security_group_id]
   tags = {
-    Name = "RDS-chirag-${terraform.workspace}"
+    Name = "RDS-maaz-${terraform.workspace}"
   }
 }
 

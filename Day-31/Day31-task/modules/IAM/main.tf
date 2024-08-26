@@ -19,7 +19,7 @@ resource "aws_iam_role" "ec2_s3_rds_role" {
 EOF
 
   tags = {
-      tag-key = "${terraform.workspace}-iam-role-chirag"
+      tag-key = "${terraform.workspace}-iam-role-maaz"
   }
 }
 
