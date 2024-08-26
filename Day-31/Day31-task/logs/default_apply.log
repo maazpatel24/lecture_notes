@@ -1,0 +1,39 @@
+Acquiring state lock. This may take a few moments...
+[0m[1mmodule.ec2.aws_eip.my_eip: Refreshing state... [id=eipalloc-05e89212ef5b99f0e][0m
+[0m[1mmodule.vpc.aws_vpc.my_vpc: Refreshing state... [id=vpc-0131c7d3e185bbea7][0m
+[0m[1mmodule.IAM.aws_iam_role.ec2_s3_rds_role: Refreshing state... [id=EC2-S3-RDS-Role][0m
+[0m[1mmodule.s3.aws_s3_bucket.app_bucket: Refreshing state... [id=day31-chirag][0m
+[0m[1mmodule.ec2.aws_iam_instance_profile.ec2_instance_profile: Refreshing state... [id=ec2_instance_profile][0m
+[0m[1mmodule.vpc.aws_internet_gateway.my_igw: Refreshing state... [id=igw-0f430271ef5b8fea4][0m
+[0m[1mmodule.vpc.aws_subnet.private_subnet2: Refreshing state... [id=subnet-0a5da6a5db8571e01][0m
+[0m[1mmodule.vpc.aws_route_table.private_rt: Refreshing state... [id=rtb-0200ae647d421000c][0m
+[0m[1mmodule.vpc.aws_subnet.public_subnet: Refreshing state... [id=subnet-086bf1535e51d2b59][0m
+[0m[1mmodule.vpc.aws_subnet.private_subnet1: Refreshing state... [id=subnet-070b04b092903392a][0m
+[0m[1mmodule.security_group.aws_security_group.ec2_sg: Refreshing state... [id=sg-03f2b4d4f90967c47][0m
+[0m[1mmodule.vpc.aws_route_table.public_rt: Refreshing state... [id=rtb-088b9292b0fbf9122][0m
+[0m[1mmodule.vpc.aws_db_subnet_group.rds_subnet_group: Refreshing state... [id=rds_subnet_group][0m
+[0m[1mmodule.vpc.aws_route_table_association.private_rt_assoc1: Refreshing state... [id=rtbassoc-07f55a44f4b0e8ff3][0m
+[0m[1mmodule.vpc.aws_route_table_association.private_rt_assoc2: Refreshing state... [id=rtbassoc-0479bbacba084b839][0m
+[0m[1mmodule.security_group.aws_security_group.rds_sg: Refreshing state... [id=sg-01a13d068ee891acc][0m
+[0m[1mmodule.ec2.aws_instance.webserver: Refreshing state... [id=i-0f816a5a4c9438a8e][0m
+[0m[1mmodule.vpc.aws_route_table_association.public_rt_association: Refreshing state... [id=rtbassoc-070c1e63f8a8ff394][0m
+[0m[1mmodule.s3.aws_s3_bucket_policy.s3_bucket_policy: Refreshing state... [id=day31-chirag][0m
+[0m[1mmodule.IAM.aws_iam_role_policy.ec2_s3_policy: Refreshing state... [id=EC2-S3-RDS-Role:ec2_s3_policy][0m
+[0m[1mmodule.rds.aws_db_instance.example: Refreshing state... [id=db-UDKQJMEOO4QUS655V5BCTWTUPE][0m
+[0m[1mmodule.IAM.aws_iam_role_policy.ec2_rds_policy: Refreshing state... [id=EC2-S3-RDS-Role:ec2_rds_policy][0m
+[0m[1mmodule.ec2.aws_eip_association.eip_assoc: Refreshing state... [id=eipassoc-0f23d51c7342ed6a9][0m
+
+[0m[1m[32mNo changes.[0m[1m Your infrastructure matches the configuration.[0m
+
+[0mTerraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.
+Releasing state lock. This may take a few moments...
+[0m[1m[32m
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+[0m[0m[1m[32m
+Outputs:
+
+[0mec2_instance_ip = "44.226.203.221"
+eip_instance = "i-0f816a5a4c9438a8e"
+rds_endpoint = "terraform-20240824102845059800000001.cdwgacgseq8w.us-west-2.rds.amazonaws.com:3306"
+s3_bucket_arn = "arn:aws:s3:::day31-chirag"

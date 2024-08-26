@@ -1,0 +1,17 @@
+[0m[1maws_s3_bucket.terraform_state: Refreshing state... [id=terraform-state-chirag][0m
+
+Changes to Outputs:
+  [31m-[0m[0m dynamoDB_table_name = "terraform-stateLock-chirag" [90m-> null[0m[0m
+  [31m-[0m[0m s3_bucket_name      = "terraform-state-chirag" [90m-> null[0m[0m
+
+You can apply this plan to save these new output values to the Terraform
+state, without changing any real infrastructure.
+[0m[1m
+Do you really want to destroy all resources?[0m
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  [1mEnter a value:[0m [0m
+[0m[1m[32m
+Destroy complete! Resources: 0 destroyed.
+[0m

@@ -1,0 +1,71 @@
+Acquiring state lock. This may take a few moments...
+[0m[1mmodule.ec2.aws_eip.my_eip: Refreshing state... [id=eipalloc-0121e17944ef2fa62][0m
+[0m[1mmodule.IAM.aws_iam_role.ec2_s3_rds_role: Refreshing state... [id=prod-EC2-S3-RDS-Role][0m
+[0m[1mmodule.vpc.aws_vpc.my_vpc: Refreshing state... [id=vpc-0ca3c47bffdc684f7][0m
+[0m[1mmodule.s3.aws_s3_bucket.app_bucket: Refreshing state... [id=prod-day31-chirag][0m
+[0m[1mmodule.ec2.aws_iam_instance_profile.ec2_instance_profile: Refreshing state... [id=prod-ec2_instance_profile][0m
+[0m[1mmodule.vpc.aws_internet_gateway.my_igw: Refreshing state... [id=igw-0cc72736447484bf0][0m
+[0m[1mmodule.vpc.aws_subnet.private_subnet1: Refreshing state... [id=subnet-06fc77ba1cd89ad6d][0m
+[0m[1mmodule.vpc.aws_route_table.private_rt: Refreshing state... [id=rtb-0168626767fa1fed7][0m
+[0m[1mmodule.vpc.aws_subnet.public_subnet: Refreshing state... [id=subnet-0f16fa9715ce2d364][0m
+[0m[1mmodule.vpc.aws_subnet.private_subnet2: Refreshing state... [id=subnet-0e6fdda47fc960405][0m
+[0m[1mmodule.security_group.aws_security_group.ec2_sg: Refreshing state... [id=sg-062da7e5f00c51b97][0m
+[0m[1mmodule.vpc.aws_route_table.public_rt: Refreshing state... [id=rtb-02bdb3f19d4302347][0m
+[0m[1mmodule.vpc.aws_route_table_association.private_rt_assoc1: Refreshing state... [id=rtbassoc-0f6f9fda3fdf02f57][0m
+[0m[1mmodule.vpc.aws_route_table_association.private_rt_assoc2: Refreshing state... [id=rtbassoc-08ab0fa32a04159b3][0m
+[0m[1mmodule.vpc.aws_db_subnet_group.rds_subnet_group: Refreshing state... [id=prod-rds_subnet_group][0m
+[0m[1mmodule.security_group.aws_security_group.rds_sg: Refreshing state... [id=sg-098032b84d6b9c1c2][0m
+[0m[1mmodule.ec2.aws_instance.webserver: Refreshing state... [id=i-083609418914c1ffd][0m
+[0m[1mmodule.vpc.aws_route_table_association.public_rt_association: Refreshing state... [id=rtbassoc-031636984d0621953][0m
+[0m[1mmodule.s3.aws_s3_bucket_policy.s3_bucket_policy: Refreshing state... [id=prod-day31-chirag][0m
+[0m[1mmodule.IAM.aws_iam_role_policy.ec2_s3_policy: Refreshing state... [id=prod-EC2-S3-RDS-Role:prod-ec2_s3_policy][0m
+[0m[1mmodule.rds.aws_db_instance.example: Refreshing state... [id=db-3QKIGXM5LDUSPW2R2XJ2ANR2D4][0m
+[0m[1mmodule.IAM.aws_iam_role_policy.ec2_rds_policy: Refreshing state... [id=prod-EC2-S3-RDS-Role:prod-ec2_rds_policy][0m
+[0m[1mmodule.ec2.aws_eip_association.eip_assoc: Refreshing state... [id=eipassoc-0ce67e5b35fd0fabd][0m
+
+[1m[36mNote:[0m[1m Objects have changed outside of Terraform
+[0m
+Terraform detected the following changes made outside of Terraform since the
+last "terraform apply" which may have affected this plan:
+
+[1m  # module.ec2.aws_eip.my_eip[0m has changed
+[0m  [33m~[0m[0m resource "aws_eip" "my_eip" {
+        id                       = "eipalloc-0121e17944ef2fa62"
+      [32m+[0m[0m instance                 = "i-083609418914c1ffd"
+        tags                     = {
+            "Name" = "eip-chirag-prod"
+        }
+        [90m# (16 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.ec2.aws_instance.webserver[0m has changed
+[0m  [33m~[0m[0m resource "aws_instance" "webserver" {
+        id                                   = "i-083609418914c1ffd"
+      [33m~[0m[0m public_ip                            = "54.244.181.76" [33m->[0m[0m "52.12.156.44"
+        tags                                 = {
+            "Name" = "prod-chirag"
+        }
+        [90m# (38 unchanged attributes hidden)[0m[0m
+
+        [90m# (8 unchanged blocks hidden)[0m[0m
+    }
+
+
+Unless you have made equivalent changes to your configuration, or ignored the
+relevant attributes using ignore_changes, the following plan may include
+actions to undo or respond to these changes.
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Changes to Outputs:
+  [33m~[0m[0m ec2_instance_ip = "54.244.181.76" [33m->[0m[0m "52.12.156.44"
+  [33m~[0m[0m eip_instance    = "" [33m->[0m[0m "i-083609418914c1ffd"
+
+You can apply this plan to save these new output values to the Terraform
+state, without changing any real infrastructure.
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
+Releasing state lock. This may take a few moments...
