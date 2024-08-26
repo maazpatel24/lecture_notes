@@ -1,0 +1,54 @@
+Acquiring state lock. This may take a few moments...
+[0m[1mmodule.s3.aws_iam_instance_profile.ec2_instance_profile: Refreshing state... [id=ec2_instance_profile][0m
+[0m[1mmodule.vpc.aws_vpc.ProjectVPC: Refreshing state... [id=vpc-08f952f7d35ff2ae5][0m
+[0m[1mmodule.s3.aws_s3_bucket.this: Refreshing state... [id=shopmax-second-chirag][0m
+[0m[1mmodule.vpc.aws_internet_gateway.Project_igw: Refreshing state... [id=igw-059544bcb9efe1f4a][0m
+[0m[1mmodule.vpc.aws_subnet.Project_public_subnet: Refreshing state... [id=subnet-0ba97b76dd69a528f][0m
+[0m[1mmodule.vpc.aws_security_group.ec2_sg_ssh: Refreshing state... [id=sg-0814458a5971e96bb][0m
+[0m[1mmodule.vpc.aws_route_table.Project_public_rt: Refreshing state... [id=rtb-0eea4229ab669a9f7][0m
+[0m[1mmodule.ec2.aws_instance.webserver: Refreshing state... [id=i-0df5fe0722680de61][0m
+[0m[1mmodule.vpc.aws_route_table_association.Project_public_rt_assoc: Refreshing state... [id=rtbassoc-0dc617e7772ac7c0d][0m
+[0m[1mmodule.s3.aws_s3_bucket_policy.s3_policy: Refreshing state... [id=shopmax-second-chirag][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [33m~[0m update in-place[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.ec2.aws_instance.webserver[0m will be updated in-place
+[0m  [33m~[0m[0m resource "aws_instance" "webserver" {
+        id                                   = "i-0df5fe0722680de61"
+      [33m~[0m[0m instance_type                        = "t2.micro" [33m->[0m[0m "t2.small"
+      [33m~[0m[0m tags                                 = {
+            "Name"    = "Webserver-chirag"
+          [32m+[0m[0m "Project" = "Shopmax-chirag"
+        }
+      [33m~[0m[0m tags_all                             = {
+          [32m+[0m[0m "Project" = "Shopmax-chirag"
+            [90m# (1 unchanged element hidden)[0m[0m
+        }
+        [90m# (37 unchanged attributes hidden)[0m[0m
+
+        [90m# (8 unchanged blocks hidden)[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 1 to change, 0 to destroy.
+[0m[0m[1mmodule.ec2.aws_instance.webserver: Modifying... [id=i-0df5fe0722680de61][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still modifying... [id=i-0df5fe0722680de61, 10s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still modifying... [id=i-0df5fe0722680de61, 20s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still modifying... [id=i-0df5fe0722680de61, 30s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still modifying... [id=i-0df5fe0722680de61, 40s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still modifying... [id=i-0df5fe0722680de61, 50s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Still modifying... [id=i-0df5fe0722680de61, 1m0s elapsed][0m[0m
+[0m[1mmodule.ec2.aws_instance.webserver: Modifications complete after 1m8s [id=i-0df5fe0722680de61][0m
+Releasing state lock. This may take a few moments...
+[0m[1m[32m
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+[0m[0m[1m[32m
+Outputs:
+
+[0mec2_instance_id = "i-0df5fe0722680de61"
+ec2_instance_public_ip = "52.32.108.82"
+s3_bucket_arn = "arn:aws:s3:::shopmax-second-chirag"
+s3_bucket_name = "shopmax-second-chirag"

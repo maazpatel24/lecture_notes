@@ -1,0 +1,287 @@
+Acquiring state lock. This may take a few moments...
+[0m[1mmodule.vpc.aws_vpc.ProjectVPC: Refreshing state... [id=vpc-0665ea90da9dd4c5d][0m
+[0m[1mmodule.s3.aws_s3_bucket.this: Refreshing state... [id=shopmax-second-chirag][0m
+[0m[1mmodule.vpc.aws_internet_gateway.Project_igw: Refreshing state... [id=igw-0295cefc673f633a6][0m
+[0m[1mmodule.vpc.aws_subnet.Project_public_subnet: Refreshing state... [id=subnet-018e989a4425664a5][0m
+[0m[1mmodule.vpc.aws_security_group.ec2_sg_ssh: Refreshing state... [id=sg-094b165c3269fa3b8][0m
+[0m[1mmodule.vpc.aws_route_table.Project_public_rt: Refreshing state... [id=rtb-08f0f60955cbc1a9b][0m
+[0m[1mmodule.vpc.aws_route_table_association.Project_public_rt_assoc: Refreshing state... [id=rtbassoc-08ddcea8e54c50345][0m
+[0m[1mmodule.s3.aws_s3_bucket_policy.s3_policy: Refreshing state... [id=shopmax-second-chirag][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.s3.aws_s3_bucket.this[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_s3_bucket" "this" {
+      [31m-[0m[0m arn                         = "arn:aws:s3:::shopmax-second-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m bucket                      = "shopmax-second-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m bucket_domain_name          = "shopmax-second-chirag.s3.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m bucket_regional_domain_name = "shopmax-second-chirag.s3.us-west-2.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m force_destroy               = false [90m-> null[0m[0m
+      [31m-[0m[0m hosted_zone_id              = "Z3BJ6K6RIION7M" [90m-> null[0m[0m
+      [31m-[0m[0m id                          = "shopmax-second-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m object_lock_enabled         = false [90m-> null[0m[0m
+      [31m-[0m[0m policy                      = jsonencode(
+            {
+              [31m-[0m[0m Statement = [
+                  [31m-[0m[0m {
+                      [31m-[0m[0m Action    = [
+                          [31m-[0m[0m "s3:GetObject",
+                          [31m-[0m[0m "s3:PutObject",
+                          [31m-[0m[0m "s3:ListBucket",
+                        ]
+                      [31m-[0m[0m Effect    = "Allow"
+                      [31m-[0m[0m Principal = {
+                          [31m-[0m[0m AWS = "arn:aws:iam::326151034032:role/EC2-S3-Role"
+                        }
+                      [31m-[0m[0m Resource  = [
+                          [31m-[0m[0m "arn:aws:s3:::shopmax-second-chirag",
+                          [31m-[0m[0m "arn:aws:s3:::shopmax-second-chirag/*",
+                        ]
+                    },
+                ]
+              [31m-[0m[0m Version   = "2012-10-17"
+            }
+        ) [90m-> null[0m[0m
+      [31m-[0m[0m region                      = "us-west-2" [90m-> null[0m[0m
+      [31m-[0m[0m request_payer               = "BucketOwner" [90m-> null[0m[0m
+      [31m-[0m[0m tags                        = {
+          [31m-[0m[0m "Name" = "shopmax-second-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                    = {
+          [31m-[0m[0m "Name" = "shopmax-second-chirag"
+        } [90m-> null[0m[0m
+        [90m# (2 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m grant {
+          [31m-[0m[0m id          = "e9795e149da14393b2aad04fc537a9b533c377ff11f44636857d0be33f7389e7" [90m-> null[0m[0m
+          [31m-[0m[0m permissions = [
+              [31m-[0m[0m "FULL_CONTROL",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m type        = "CanonicalUser" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m server_side_encryption_configuration {
+          [31m-[0m[0m rule {
+              [31m-[0m[0m bucket_key_enabled = false [90m-> null[0m[0m
+
+              [31m-[0m[0m apply_server_side_encryption_by_default {
+                  [31m-[0m[0m sse_algorithm     = "AES256" [90m-> null[0m[0m
+                    [90m# (1 unchanged attribute hidden)[0m[0m
+                }
+            }
+        }
+
+      [31m-[0m[0m versioning {
+          [31m-[0m[0m enabled    = false [90m-> null[0m[0m
+          [31m-[0m[0m mfa_delete = false [90m-> null[0m[0m
+        }
+    }
+
+[1m  # module.s3.aws_s3_bucket_policy.s3_policy[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_s3_bucket_policy" "s3_policy" {
+      [31m-[0m[0m bucket = "shopmax-second-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m id     = "shopmax-second-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m policy = jsonencode(
+            {
+              [31m-[0m[0m Statement = [
+                  [31m-[0m[0m {
+                      [31m-[0m[0m Action    = [
+                          [31m-[0m[0m "s3:GetObject",
+                          [31m-[0m[0m "s3:PutObject",
+                          [31m-[0m[0m "s3:ListBucket",
+                        ]
+                      [31m-[0m[0m Effect    = "Allow"
+                      [31m-[0m[0m Principal = {
+                          [31m-[0m[0m AWS = "arn:aws:iam::326151034032:role/EC2-S3-Role"
+                        }
+                      [31m-[0m[0m Resource  = [
+                          [31m-[0m[0m "arn:aws:s3:::shopmax-second-chirag",
+                          [31m-[0m[0m "arn:aws:s3:::shopmax-second-chirag/*",
+                        ]
+                    },
+                ]
+              [31m-[0m[0m Version   = "2012-10-17"
+            }
+        ) [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_internet_gateway.Project_igw[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_internet_gateway" "Project_igw" {
+      [31m-[0m[0m arn      = "arn:aws:ec2:us-west-2:326151034032:internet-gateway/igw-0295cefc673f633a6" [90m-> null[0m[0m
+      [31m-[0m[0m id       = "igw-0295cefc673f633a6" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m tags     = {
+          [31m-[0m[0m "Name" = "MyIGW-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all = {
+          [31m-[0m[0m "Name" = "MyIGW-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id   = "vpc-0665ea90da9dd4c5d" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_route_table.Project_public_rt[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "Project_public_rt" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-west-2:326151034032:route-table/rtb-08f0f60955cbc1a9b" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-08f0f60955cbc1a9b" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m gateway_id                 = "igw-0295cefc673f633a6"
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-0665ea90da9dd4c5d" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_route_table_association.Project_public_rt_assoc[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "Project_public_rt_assoc" {
+      [31m-[0m[0m id             = "rtbassoc-08ddcea8e54c50345" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-08f0f60955cbc1a9b" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-018e989a4425664a5" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.vpc.aws_security_group.ec2_sg_ssh[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "ec2_sg_ssh" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-west-2:326151034032:security-group/sg-094b165c3269fa3b8" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Managed by Terraform" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-094b165c3269fa3b8" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 22
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 22
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 80
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 80
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "terraform-20240821165337684100000001" [90m-> null[0m[0m
+      [31m-[0m[0m name_prefix            = "terraform-" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "Name" = "ec2-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "Name" = "ec2-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-0665ea90da9dd4c5d" [90m-> null[0m[0m
+    }
+
+[1m  # module.vpc.aws_subnet.Project_public_subnet[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "Project_public_subnet" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-west-2:326151034032:subnet/subnet-018e989a4425664a5" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-west-2d" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "usw2-az4" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.0.1.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-018e989a4425664a5" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {} [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0665ea90da9dd4c5d" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.vpc.aws_vpc.ProjectVPC[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_vpc" "ProjectVPC" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-west-2:326151034032:vpc/vpc-0665ea90da9dd4c5d" [90m-> null[0m[0m
+      [31m-[0m[0m assign_generated_ipv6_cidr_block     = false [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                           = "10.0.0.0/16" [90m-> null[0m[0m
+      [31m-[0m[0m default_network_acl_id               = "acl-0fd45f566c803f35a" [90m-> null[0m[0m
+      [31m-[0m[0m default_route_table_id               = "rtb-08f6865bc052f4a61" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id            = "sg-0c8f4ee9e22315065" [90m-> null[0m[0m
+      [31m-[0m[0m dhcp_options_id                      = "dopt-02000fb8b0a2c3cc6" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_hostnames                 = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_support                   = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_network_address_usage_metrics = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "vpc-0665ea90da9dd4c5d" [90m-> null[0m[0m
+      [31m-[0m[0m instance_tenancy                     = "default" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_netmask_length                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m main_route_table_id                  = "rtb-08f6865bc052f4a61" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                             = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Name" = "MyVPC-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Name" = "MyVPC-chirag"
+        } [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 8 to destroy.
+[0m
+Changes to Outputs:
+  [31m-[0m[0m s3_bucket_arn  = "arn:aws:s3:::shopmax-second-chirag" [90m-> null[0m[0m
+  [31m-[0m[0m s3_bucket_name = "shopmax-second-chirag" [90m-> null[0m[0m
+[0m[1mmodule.s3.aws_s3_bucket_policy.s3_policy: Destroying... [id=shopmax-second-chirag][0m[0m
+[0m[1mmodule.vpc.aws_route_table_association.Project_public_rt_assoc: Destroying... [id=rtbassoc-08ddcea8e54c50345][0m[0m
+[0m[1mmodule.vpc.aws_security_group.ec2_sg_ssh: Destroying... [id=sg-094b165c3269fa3b8][0m[0m
+[0m[1mmodule.s3.aws_s3_bucket_policy.s3_policy: Destruction complete after 2s[0m
+[0m[1mmodule.s3.aws_s3_bucket.this: Destroying... [id=shopmax-second-chirag][0m[0m
+[0m[1mmodule.vpc.aws_route_table_association.Project_public_rt_assoc: Destruction complete after 3s[0m
+[0m[1mmodule.vpc.aws_subnet.Project_public_subnet: Destroying... [id=subnet-018e989a4425664a5][0m[0m
+[0m[1mmodule.vpc.aws_route_table.Project_public_rt: Destroying... [id=rtb-08f0f60955cbc1a9b][0m[0m
+[0m[1mmodule.vpc.aws_security_group.ec2_sg_ssh: Destruction complete after 3s[0m
+[0m[1mmodule.s3.aws_s3_bucket.this: Destruction complete after 1s[0m
+[0m[1mmodule.vpc.aws_subnet.Project_public_subnet: Destruction complete after 1s[0m
+[0m[1mmodule.vpc.aws_route_table.Project_public_rt: Destruction complete after 1s[0m
+[0m[1mmodule.vpc.aws_internet_gateway.Project_igw: Destroying... [id=igw-0295cefc673f633a6][0m[0m
+[0m[1mmodule.vpc.aws_internet_gateway.Project_igw: Destruction complete after 2s[0m
+[0m[1mmodule.vpc.aws_vpc.ProjectVPC: Destroying... [id=vpc-0665ea90da9dd4c5d][0m[0m
+[0m[1mmodule.vpc.aws_vpc.ProjectVPC: Destruction complete after 1s[0m
+Releasing state lock. This may take a few moments...
+[0m[1m[32m
+Destroy complete! Resources: 8 destroyed.
+[0m
