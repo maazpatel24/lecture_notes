@@ -1,0 +1,565 @@
+[0m[1mdata.aws_iam_policy_document.ecs_task_assume_role: Reading...[0m[0m
+[0m[1maws_ecs_cluster.main: Refreshing state... [id=arn:aws:ecs:us-west-2:326151034032:cluster/my-cluster-chirag][0m
+[0m[1maws_secretsmanager_secret.db_secret: Refreshing state... [id=arn:aws:secretsmanager:us-west-2:326151034032:secret:db-secret-chirag-MSbiu8][0m
+[0m[1maws_vpc.my_vpc: Refreshing state... [id=vpc-05ba62dbc7ecf39fe][0m
+[0m[1mdata.aws_iam_policy_document.ecs_task_assume_role: Read complete after 0s [id=1077804475][0m
+[0m[1maws_iam_role.ecs_task_role: Refreshing state... [id=ecs-task-role][0m
+[0m[1maws_secretsmanager_secret_version.db_secret_version: Refreshing state... [id=arn:aws:secretsmanager:us-west-2:326151034032:secret:db-secret-chirag-MSbiu8|terraform-20240826174032461400000002][0m
+[0m[1maws_ecs_task_definition.frontend: Refreshing state... [id=frontend-task][0m
+[0m[1maws_route_table.private_rt: Refreshing state... [id=rtb-015d580e9e8f2f903][0m
+[0m[1maws_subnet.public_subnet: Refreshing state... [id=subnet-05e72a8de71719395][0m
+[0m[1maws_subnet.private2: Refreshing state... [id=subnet-0142ee5f79db00407][0m
+[0m[1maws_security_group.frontend: Refreshing state... [id=sg-0dc11466f904a6d00][0m
+[0m[1maws_route_table_association.private_rt_assoc2: Refreshing state... [id=rtbassoc-0c44022e7c064af39][0m
+[0m[1maws_ecs_service.frontend: Refreshing state... [id=arn:aws:ecs:us-west-2:326151034032:service/my-cluster-chirag/frontend-service-chirag][0m
+[0m[1maws_security_group.backend: Refreshing state... [id=sg-058cc1ad5010ca3b6][0m
+[0m[1maws_appautoscaling_target.frontend_scaling_target: Refreshing state... [id=service/my-cluster-chirag/frontend-service-chirag][0m
+[0m[1maws_security_group.db: Refreshing state... [id=sg-0298871362b6c321b][0m
+[0m[1maws_appautoscaling_policy.frontend_scaling_policy: Refreshing state... [id=frontend-scaling-policy][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # aws_appautoscaling_policy.frontend_scaling_policy[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_appautoscaling_policy" "frontend_scaling_policy" {
+      [31m-[0m[0m alarm_arns         = [
+          [31m-[0m[0m "arn:aws:cloudwatch:us-west-2:326151034032:alarm:TargetTracking-service/my-cluster-chirag/frontend-service-chirag-AlarmHigh-717d4e06-a442-451f-b185-d39019183490",
+          [31m-[0m[0m "arn:aws:cloudwatch:us-west-2:326151034032:alarm:TargetTracking-service/my-cluster-chirag/frontend-service-chirag-AlarmLow-660a9d33-b9a1-47e9-8f7f-ad44b537151b",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m arn                = "arn:aws:autoscaling:us-west-2:326151034032:scalingPolicy:896dd78b-f4ae-4a96-a102-714114ce46ca:resource/ecs/service/my-cluster-chirag/frontend-service-chirag:policyName/frontend-scaling-policy" [90m-> null[0m[0m
+      [31m-[0m[0m id                 = "frontend-scaling-policy" [90m-> null[0m[0m
+      [31m-[0m[0m name               = "frontend-scaling-policy" [90m-> null[0m[0m
+      [31m-[0m[0m policy_type        = "TargetTrackingScaling" [90m-> null[0m[0m
+      [31m-[0m[0m resource_id        = "service/my-cluster-chirag/frontend-service-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m scalable_dimension = "ecs:service:DesiredCount" [90m-> null[0m[0m
+      [31m-[0m[0m service_namespace  = "ecs" [90m-> null[0m[0m
+
+      [31m-[0m[0m target_tracking_scaling_policy_configuration {
+          [31m-[0m[0m disable_scale_in   = false [90m-> null[0m[0m
+          [31m-[0m[0m scale_in_cooldown  = 0 [90m-> null[0m[0m
+          [31m-[0m[0m scale_out_cooldown = 0 [90m-> null[0m[0m
+          [31m-[0m[0m target_value       = 50 [90m-> null[0m[0m
+
+          [31m-[0m[0m predefined_metric_specification {
+              [31m-[0m[0m predefined_metric_type = "ECSServiceAverageCPUUtilization" [90m-> null[0m[0m
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            }
+        }
+    }
+
+[1m  # aws_appautoscaling_target.frontend_scaling_target[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_appautoscaling_target" "frontend_scaling_target" {
+      [31m-[0m[0m arn                = "arn:aws:application-autoscaling:us-west-2:326151034032:scalable-target/0ec5896dd78bf4ae4a96a102714114ce46ca" [90m-> null[0m[0m
+      [31m-[0m[0m id                 = "service/my-cluster-chirag/frontend-service-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m max_capacity       = 3 [90m-> null[0m[0m
+      [31m-[0m[0m min_capacity       = 1 [90m-> null[0m[0m
+      [31m-[0m[0m resource_id        = "service/my-cluster-chirag/frontend-service-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m role_arn           = "arn:aws:iam::326151034032:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService" [90m-> null[0m[0m
+      [31m-[0m[0m scalable_dimension = "ecs:service:DesiredCount" [90m-> null[0m[0m
+      [31m-[0m[0m service_namespace  = "ecs" [90m-> null[0m[0m
+      [31m-[0m[0m tags               = {
+          [31m-[0m[0m "Name" = "chirag-autoscaling-target"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all           = {
+          [31m-[0m[0m "Name" = "chirag-autoscaling-target"
+        } [90m-> null[0m[0m
+
+      [31m-[0m[0m suspended_state {
+          [31m-[0m[0m dynamic_scaling_in_suspended  = false [90m-> null[0m[0m
+          [31m-[0m[0m dynamic_scaling_out_suspended = false [90m-> null[0m[0m
+          [31m-[0m[0m scheduled_scaling_suspended   = false [90m-> null[0m[0m
+        }
+    }
+
+[1m  # aws_ecs_cluster.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_ecs_cluster" "main" {
+      [31m-[0m[0m arn      = "arn:aws:ecs:us-west-2:326151034032:cluster/my-cluster-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m id       = "arn:aws:ecs:us-west-2:326151034032:cluster/my-cluster-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m name     = "my-cluster-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m tags     = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all = {} [90m-> null[0m[0m
+
+      [31m-[0m[0m setting {
+          [31m-[0m[0m name  = "containerInsights" [90m-> null[0m[0m
+          [31m-[0m[0m value = "disabled" [90m-> null[0m[0m
+        }
+    }
+
+[1m  # aws_ecs_service.frontend[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_ecs_service" "frontend" {
+      [31m-[0m[0m cluster                            = "arn:aws:ecs:us-west-2:326151034032:cluster/my-cluster-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m deployment_maximum_percent         = 200 [90m-> null[0m[0m
+      [31m-[0m[0m deployment_minimum_healthy_percent = 100 [90m-> null[0m[0m
+      [31m-[0m[0m desired_count                      = 1 [90m-> null[0m[0m
+      [31m-[0m[0m enable_ecs_managed_tags            = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_execute_command             = false [90m-> null[0m[0m
+      [31m-[0m[0m health_check_grace_period_seconds  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m iam_role                           = "/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS" [90m-> null[0m[0m
+      [31m-[0m[0m id                                 = "arn:aws:ecs:us-west-2:326151034032:service/my-cluster-chirag/frontend-service-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m launch_type                        = "FARGATE" [90m-> null[0m[0m
+      [31m-[0m[0m name                               = "frontend-service-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m platform_version                   = "LATEST" [90m-> null[0m[0m
+      [31m-[0m[0m propagate_tags                     = "NONE" [90m-> null[0m[0m
+      [31m-[0m[0m scheduling_strategy                = "REPLICA" [90m-> null[0m[0m
+      [31m-[0m[0m tags                               = {
+          [31m-[0m[0m "Name" = "chirag-frontend-service"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                           = {
+          [31m-[0m[0m "Name" = "chirag-frontend-service"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m task_definition                    = "arn:aws:ecs:us-west-2:326151034032:task-definition/frontend-task:4" [90m-> null[0m[0m
+      [31m-[0m[0m triggers                           = {} [90m-> null[0m[0m
+      [31m-[0m[0m wait_for_steady_state              = false [90m-> null[0m[0m
+
+      [31m-[0m[0m deployment_circuit_breaker {
+          [31m-[0m[0m enable   = false [90m-> null[0m[0m
+          [31m-[0m[0m rollback = false [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m deployment_controller {
+          [31m-[0m[0m type = "ECS" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m network_configuration {
+          [31m-[0m[0m assign_public_ip = true [90m-> null[0m[0m
+          [31m-[0m[0m security_groups  = [
+              [31m-[0m[0m "sg-0dc11466f904a6d00",
+            ] [90m-> null[0m[0m
+          [31m-[0m[0m subnets          = [
+              [31m-[0m[0m "subnet-05e72a8de71719395",
+            ] [90m-> null[0m[0m
+        }
+    }
+
+[1m  # aws_ecs_task_definition.frontend[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_ecs_task_definition" "frontend" {
+      [31m-[0m[0m arn                      = "arn:aws:ecs:us-west-2:326151034032:task-definition/frontend-task:4" [90m-> null[0m[0m
+      [31m-[0m[0m arn_without_revision     = "arn:aws:ecs:us-west-2:326151034032:task-definition/frontend-task" [90m-> null[0m[0m
+      [31m-[0m[0m container_definitions    = jsonencode(
+            [
+              [31m-[0m[0m {
+                  [31m-[0m[0m cpu            = 256
+                  [31m-[0m[0m environment    = []
+                  [31m-[0m[0m essential      = true
+                  [31m-[0m[0m image          = "chirag1212/full-stack-app:frontend_v2"
+                  [31m-[0m[0m memory         = 512
+                  [31m-[0m[0m mountPoints    = []
+                  [31m-[0m[0m name           = "frontend"
+                  [31m-[0m[0m portMappings   = [
+                      [31m-[0m[0m {
+                          [31m-[0m[0m containerPort = 80
+                          [31m-[0m[0m hostPort      = 80
+                          [31m-[0m[0m protocol      = "tcp"
+                        },
+                    ]
+                  [31m-[0m[0m systemControls = []
+                  [31m-[0m[0m volumesFrom    = []
+                },
+            ]
+        ) [90m-> null[0m[0m
+      [31m-[0m[0m cpu                      = "256" [90m-> null[0m[0m
+      [31m-[0m[0m execution_role_arn       = "arn:aws:iam::326151034032:role/ecs-task-role" [90m-> null[0m[0m
+      [31m-[0m[0m family                   = "frontend-task" [90m-> null[0m[0m
+      [31m-[0m[0m id                       = "frontend-task" [90m-> null[0m[0m
+      [31m-[0m[0m memory                   = "512" [90m-> null[0m[0m
+      [31m-[0m[0m network_mode             = "awsvpc" [90m-> null[0m[0m
+      [31m-[0m[0m requires_compatibilities = [
+          [31m-[0m[0m "FARGATE",
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m revision                 = 4 [90m-> null[0m[0m
+      [31m-[0m[0m skip_destroy             = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                     = {
+          [31m-[0m[0m "Name" = "chirag-frontend-task-def"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                 = {
+          [31m-[0m[0m "Name" = "chirag-frontend-task-def"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m track_latest             = false [90m-> null[0m[0m
+        [90m# (3 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # aws_iam_role.ecs_task_role[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_iam_role" "ecs_task_role" {
+      [31m-[0m[0m arn                   = "arn:aws:iam::326151034032:role/ecs-task-role" [90m-> null[0m[0m
+      [31m-[0m[0m assume_role_policy    = jsonencode(
+            {
+              [31m-[0m[0m Statement = [
+                  [31m-[0m[0m {
+                      [31m-[0m[0m Action    = "sts:AssumeRole"
+                      [31m-[0m[0m Effect    = "Allow"
+                      [31m-[0m[0m Principal = {
+                          [31m-[0m[0m Service = "ecs-tasks.amazonaws.com"
+                        }
+                    },
+                ]
+              [31m-[0m[0m Version   = "2012-10-17"
+            }
+        ) [90m-> null[0m[0m
+      [31m-[0m[0m create_date           = "2024-08-26T17:40:31Z" [90m-> null[0m[0m
+      [31m-[0m[0m force_detach_policies = false [90m-> null[0m[0m
+      [31m-[0m[0m id                    = "ecs-task-role" [90m-> null[0m[0m
+      [31m-[0m[0m managed_policy_arns   = [] [90m-> null[0m[0m
+      [31m-[0m[0m max_session_duration  = 3600 [90m-> null[0m[0m
+      [31m-[0m[0m name                  = "ecs-task-role" [90m-> null[0m[0m
+      [31m-[0m[0m path                  = "/" [90m-> null[0m[0m
+      [31m-[0m[0m tags                  = {
+          [31m-[0m[0m "Name" = "chirag-ecs-task-role"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all              = {
+          [31m-[0m[0m "Name" = "chirag-ecs-task-role"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m unique_id             = "AROAUX4A52SYLFTPRJWZL" [90m-> null[0m[0m
+        [90m# (3 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # aws_route_table.private_rt[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "private_rt" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-west-2:326151034032:route-table/rtb-015d580e9e8f2f903" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-015d580e9e8f2f903" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Name" = "Pri-RT-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Name" = "Pri-RT-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-05ba62dbc7ecf39fe" [90m-> null[0m[0m
+    }
+
+[1m  # aws_route_table_association.private_rt_assoc2[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "private_rt_assoc2" {
+      [31m-[0m[0m id             = "rtbassoc-0c44022e7c064af39" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-015d580e9e8f2f903" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-0142ee5f79db00407" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # aws_secretsmanager_secret.db_secret[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_secretsmanager_secret" "db_secret" {
+      [31m-[0m[0m arn                            = "arn:aws:secretsmanager:us-west-2:326151034032:secret:db-secret-chirag-MSbiu8" [90m-> null[0m[0m
+      [31m-[0m[0m force_overwrite_replica_secret = false [90m-> null[0m[0m
+      [31m-[0m[0m id                             = "arn:aws:secretsmanager:us-west-2:326151034032:secret:db-secret-chirag-MSbiu8" [90m-> null[0m[0m
+      [31m-[0m[0m name                           = "db-secret-chirag" [90m-> null[0m[0m
+      [31m-[0m[0m recovery_window_in_days        = 30 [90m-> null[0m[0m
+      [31m-[0m[0m tags                           = {} [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                       = {} [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # aws_secretsmanager_secret_version.db_secret_version[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_secretsmanager_secret_version" "db_secret_version" {
+      [31m-[0m[0m arn            = "arn:aws:secretsmanager:us-west-2:326151034032:secret:db-secret-chirag-MSbiu8" [90m-> null[0m[0m
+      [31m-[0m[0m id             = "arn:aws:secretsmanager:us-west-2:326151034032:secret:db-secret-chirag-MSbiu8|terraform-20240826174032461400000002" [90m-> null[0m[0m
+      [31m-[0m[0m secret_id      = "arn:aws:secretsmanager:us-west-2:326151034032:secret:db-secret-chirag-MSbiu8" [90m-> null[0m[0m
+      [31m-[0m[0m secret_string  = (sensitive value) [90m-> null[0m[0m
+      [31m-[0m[0m version_id     = "terraform-20240826174032461400000002" [90m-> null[0m[0m
+      [31m-[0m[0m version_stages = [
+          [31m-[0m[0m "AWSCURRENT",
+        ] [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # aws_security_group.backend[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "backend" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-west-2:326151034032:security-group/sg-058cc1ad5010ca3b6" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Managed by Terraform" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-058cc1ad5010ca3b6" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 3306
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 3306
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = []
+              [31m-[0m[0m from_port        = 5000
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = [
+                  [31m-[0m[0m "sg-0dc11466f904a6d00",
+                ]
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 5000
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "terraform-20240826174041550700000005" [90m-> null[0m[0m
+      [31m-[0m[0m name_prefix            = "terraform-" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "Name" = "backend-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "Name" = "backend-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-05ba62dbc7ecf39fe" [90m-> null[0m[0m
+    }
+
+[1m  # aws_security_group.db[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "db" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-west-2:326151034032:security-group/sg-0298871362b6c321b" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Managed by Terraform" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-0298871362b6c321b" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = []
+              [31m-[0m[0m from_port        = 3306
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = [
+                  [31m-[0m[0m "sg-058cc1ad5010ca3b6",
+                ]
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 3306
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "terraform-20240826174046226400000006" [90m-> null[0m[0m
+      [31m-[0m[0m name_prefix            = "terraform-" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "Name" = "db-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "Name" = "db-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-05ba62dbc7ecf39fe" [90m-> null[0m[0m
+    }
+
+[1m  # aws_security_group.frontend[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "frontend" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-west-2:326151034032:security-group/sg-0dc11466f904a6d00" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Managed by Terraform" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-0dc11466f904a6d00" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 443
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 443
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m from_port        = 80
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 80
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "terraform-20240826174035616600000004" [90m-> null[0m[0m
+      [31m-[0m[0m name_prefix            = "terraform-" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "Name" = "frontend-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "Name" = "frontend-sg-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-05ba62dbc7ecf39fe" [90m-> null[0m[0m
+    }
+
+[1m  # aws_subnet.private2[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "private2" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-west-2:326151034032:subnet/subnet-0142ee5f79db00407" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-west-2b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "usw2-az2" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.0.2.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-0142ee5f79db00407" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = false [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Name" = "pri2-sub-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Name" = "pri2-sub-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-05ba62dbc7ecf39fe" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # aws_subnet.public_subnet[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public_subnet" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-west-2:326151034032:subnet/subnet-05e72a8de71719395" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-west-2a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "usw2-az1" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.0.1.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-05e72a8de71719395" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Name" = "pub-sub-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Name" = "pub-sub-chirag"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-05ba62dbc7ecf39fe" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # aws_vpc.my_vpc[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_vpc" "my_vpc" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-west-2:326151034032:vpc/vpc-05ba62dbc7ecf39fe" [90m-> null[0m[0m
+      [31m-[0m[0m assign_generated_ipv6_cidr_block     = false [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                           = "10.0.0.0/16" [90m-> null[0m[0m
+      [31m-[0m[0m default_network_acl_id               = "acl-022fdd44a2b0b1958" [90m-> null[0m[0m
+      [31m-[0m[0m default_route_table_id               = "rtb-0ce07b5a14ca64324" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id            = "sg-05dfcc49be7eacbd2" [90m-> null[0m[0m
+      [31m-[0m[0m dhcp_options_id                      = "dopt-02000fb8b0a2c3cc6" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_hostnames                 = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_support                   = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_network_address_usage_metrics = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "vpc-05ba62dbc7ecf39fe" [90m-> null[0m[0m
+      [31m-[0m[0m instance_tenancy                     = "default" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_netmask_length                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m main_route_table_id                  = "rtb-0ce07b5a14ca64324" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                             = "326151034032" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Name" = "chirag-vpc"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Name" = "chirag-vpc"
+        } [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 16 to destroy.
+[0m[0m[1m
+Do you really want to destroy all resources?[0m
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  [1mEnter a value:[0m [0m
+[0m[1maws_route_table_association.private_rt_assoc2: Destroying... [id=rtbassoc-0c44022e7c064af39][0m[0m
+[0m[1maws_secretsmanager_secret_version.db_secret_version: Destroying... [id=arn:aws:secretsmanager:us-west-2:326151034032:secret:db-secret-chirag-MSbiu8|terraform-20240826174032461400000002][0m[0m
+[0m[1maws_appautoscaling_policy.frontend_scaling_policy: Destroying... [id=frontend-scaling-policy][0m[0m
+[0m[1maws_security_group.db: Destroying... [id=sg-0298871362b6c321b][0m[0m
+[0m[1maws_secretsmanager_secret_version.db_secret_version: Destruction complete after 1s[0m
+[0m[1maws_secretsmanager_secret.db_secret: Destroying... [id=arn:aws:secretsmanager:us-west-2:326151034032:secret:db-secret-chirag-MSbiu8][0m[0m
+[0m[1maws_secretsmanager_secret.db_secret: Destruction complete after 0s[0m
+[0m[1maws_route_table_association.private_rt_assoc2: Destruction complete after 1s[0m
+[0m[1maws_appautoscaling_policy.frontend_scaling_policy: Destruction complete after 1s[0m
+[0m[1maws_route_table.private_rt: Destroying... [id=rtb-015d580e9e8f2f903][0m[0m
+[0m[1maws_appautoscaling_target.frontend_scaling_target: Destroying... [id=service/my-cluster-chirag/frontend-service-chirag][0m[0m
+[0m[1maws_subnet.private2: Destroying... [id=subnet-0142ee5f79db00407][0m[0m
+[0m[1maws_appautoscaling_target.frontend_scaling_target: Destruction complete after 1s[0m
+[0m[1maws_ecs_service.frontend: Destroying... [id=arn:aws:ecs:us-west-2:326151034032:service/my-cluster-chirag/frontend-service-chirag][0m[0m
+[0m[1maws_security_group.db: Destruction complete after 3s[0m
+[0m[1maws_security_group.backend: Destroying... [id=sg-058cc1ad5010ca3b6][0m[0m
+[0m[1maws_subnet.private2: Destruction complete after 2s[0m
+[0m[1maws_route_table.private_rt: Destruction complete after 3s[0m
+[0m[1maws_security_group.backend: Destruction complete after 1s[0m
+[0m[1maws_ecs_service.frontend: Still destroying... [id=arn:aws:ecs:us-west-2:326151034032:serv...cluster-chirag/frontend-service-chirag, 10s elapsed][0m[0m
+[0m[1maws_ecs_service.frontend: Still destroying... [id=arn:aws:ecs:us-west-2:326151034032:serv...cluster-chirag/frontend-service-chirag, 20s elapsed][0m[0m
+[0m[1maws_ecs_service.frontend: Still destroying... [id=arn:aws:ecs:us-west-2:326151034032:serv...cluster-chirag/frontend-service-chirag, 30s elapsed][0m[0m
+[0m[1maws_ecs_service.frontend: Still destroying... [id=arn:aws:ecs:us-west-2:326151034032:serv...cluster-chirag/frontend-service-chirag, 40s elapsed][0m[0m
+[0m[1maws_ecs_service.frontend: Still destroying... [id=arn:aws:ecs:us-west-2:326151034032:serv...cluster-chirag/frontend-service-chirag, 50s elapsed][0m[0m
+[0m[1maws_ecs_service.frontend: Still destroying... [id=arn:aws:ecs:us-west-2:326151034032:serv...cluster-chirag/frontend-service-chirag, 1m0s elapsed][0m[0m
+[0m[1maws_ecs_service.frontend: Still destroying... [id=arn:aws:ecs:us-west-2:326151034032:serv...cluster-chirag/frontend-service-chirag, 1m10s elapsed][0m[0m
+[0m[1maws_ecs_service.frontend: Destruction complete after 1m19s[0m
+[0m[1maws_ecs_cluster.main: Destroying... [id=arn:aws:ecs:us-west-2:326151034032:cluster/my-cluster-chirag][0m[0m
+[0m[1maws_subnet.public_subnet: Destroying... [id=subnet-05e72a8de71719395][0m[0m
+[0m[1maws_ecs_task_definition.frontend: Destroying... [id=frontend-task][0m[0m
+[0m[1maws_security_group.frontend: Destroying... [id=sg-0dc11466f904a6d00][0m[0m
+[0m[1maws_ecs_task_definition.frontend: Destruction complete after 1s[0m
+[0m[1maws_iam_role.ecs_task_role: Destroying... [id=ecs-task-role][0m[0m
+[0m[1maws_ecs_cluster.main: Destruction complete after 1s[0m
+[0m[1maws_subnet.public_subnet: Destruction complete after 1s[0m
+[0m[1maws_iam_role.ecs_task_role: Destruction complete after 1s[0m
+[0m[1maws_security_group.frontend: Destruction complete after 2s[0m
+[0m[1maws_vpc.my_vpc: Destroying... [id=vpc-05ba62dbc7ecf39fe][0m[0m
+[0m[1maws_vpc.my_vpc: Destruction complete after 1s[0m
+[0m[1m[32m
+Destroy complete! Resources: 16 destroyed.
+[0m
